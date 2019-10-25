@@ -1,0 +1,38 @@
+/* ==============================================
+  MIXINS.SCSS
+  A collection of useful mixins
+============================================== */
+
+// DEBUGGING BORDERS
+$target1: 1px solid red;
+$target2: 1px solid green;
+$target3: 1px solid blue;
+
+// LINK STYLE OVERRIDE
+@mixin no-link-styles(){
+  text-decoration:none;
+
+  &:hover, &:focus, &:active{
+    text-decoration:none;
+    color:inherit;
+  }
+}
+
+// REMOVE MARGIN AND PADDING
+@mixin no-space(){
+  margin:0;
+  padding:0;
+}
+
+// REMOVE ANY CSS APPEARANCE RULES
+@mixin no-appearance(){
+  -webkit-appearance:none !important;
+  -moz-appearance:none !important;
+  appearance:none !important;
+  text-shadow:none !important;
+  outline:none !important;
+  -webkit-box-shadow:none !important;
+  -moz-box-shadow:none !important;
+  box-shadow:none !important;
+  border-radius:0;
+}

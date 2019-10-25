@@ -1,0 +1,59 @@
+@import '../main.scss';
+
+.main-sidebar{
+  background:url('../../images/stardust.png') repeat;
+  padding:1em;
+  border-right:1px solid $black;
+}
+
+.jts-logo{
+  background:$white;
+  transition:background, 0.2s, ease-in-out;
+  width:100%;
+  height:auto;
+  margin-bottom:-0.5em;
+
+  &:hover{
+    background:$lightBlue;
+    transition:background, 0.2s, ease-in-out;
+  }
+}
+
+.header-title{
+  @include raleway;
+  font-size:1.1em;
+  line-height:1.2em;
+  text-transform:uppercase;
+  color:$white;
+}
+
+.sidebar-info{
+  position:absolute;
+  bottom:1em;
+  left:1em;
+}
+
+.social, .specialities{
+  h2, a{
+    @include raleway;
+    font-size:0.6em;
+    line-height:1.7em;
+    color:$white;
+    text-transform:uppercase;
+  }
+}
+
+.social{
+  a{
+    display:block;
+
+    &:hover{
+      color:$lightBlue !important;
+    }
+  }
+}
+
+.specialities{
+  border-bottom:1px solid $white;
+  margin-bottom:0.7em;
+}
