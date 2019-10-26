@@ -5,7 +5,7 @@ niceDate: "March 14th, 2017"
 teaser: "Helping spread the word about my favorite makerspace in Chicago."
 category: blog-post
 tags: [makerspace, wordpress, freelance, web]
-image: /assets/img/lostArts/lost-arts-logo.png
+featuredImage: lost-arts-logo.png
 external_link: http://lostarts.co
 ---
 
@@ -23,6 +23,6 @@ Charles and I clicked, and I started seeking out other ways that I could help ma
 
 The website for Lost Arts needed to reflect the vibrant and diverse community that gathers at the space, but it also needed to be easily maintained by folks who never wanted to touch code. As with many of my other projects, we decided that Wordpress was the right tool for this job.
 
-Out of all of my projects, this site has probably seen the most drastic changes over its lifetime. Charles has a drive to always make things better, and the website doesn't escape that reach. We're currently on version three of major redesigns for the site, and I'm really proud of what we have now. Along with a design that accurately reflects the values of Lost Arts, I also implemented a water-tight custom fields and post types system that lets our content editors easily update the site with very little fuss. 
+Out of all of my projects, this site has probably seen the most drastic changes over its lifetime. Charles has a drive to always make things better, and the website doesn't escape that reach. We're currently on version three of major redesigns for the site, and I'm really proud of what we have now. Along with a design that accurately reflects the values of Lost Arts, I also implemented a water-tight custom fields and post types system that lets our content editors easily update the site with very little fuss.
 
 <a href="http://lostarts.co" target="_new">Check out the website</a> to get the full view of what's going on at Lost Arts. If you're interested in creating in Chicago, it's a great place to do so, and we'd love for you to <a href="http://lostarts.co/visit-us" target="_new">stop by for a tour</a>. Also make sure to check out the <a href="http://lostarts.co/events" target="_new">events section</a> - there's always something happening at the space, and you'll probably be able to find something that you'd like to be involved in.

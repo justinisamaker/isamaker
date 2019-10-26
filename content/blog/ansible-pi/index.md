@@ -5,7 +5,7 @@ niceDate: "March 14th, 2017"
 teaser: "Get your Pi up and ready to go with a few short commands and an Ansible playbook."
 category: blog-post
 tags: [raspberrypi, pi, hardware, ansible, devops]
-image: /assets/img/ansiblePi/ansible-pi.jpg
+featuredImage: ansible-pi.jpg
 ---
 
 Getting started on a Raspberry Pi can be a little daunting if you're brand new to working with the board. The easiest route is to get a monitor and a spare mouse and keyboard to get everything set up, but there are plenty of times when you aren't going to have access to all of those components. If you're sitting there with a Pi and wondering how to get set up, this post will help you get the ball rolling. This kind of setup refers to running the Pi "headless", which is just a fancy way to say running it without a monitor.
@@ -79,9 +79,7 @@ The next piece that we'll look at is the actual list of tasks, which you can fin
 
 Before we run this, you'll need to install Ansible on your Mac. You can do this through <a href="https://brew.sh/" target="_new">Homebrew</a> by running "`brew install ansible`".
 
-Now we're on to the good stuff - actually running our playbook! On your Mac's terminal, navigate to the folder that you cloned ansible-pi to, then run "`ansible-playbook -s -i hosts ansible-pi.yml`". This tells Ansible to run our root playbook with sudo access using the hosts file from the repo. You should see the task names start to read out to your terminal. For a brand new Pi, each task should say the task name, and then a status message that should read "changed: YOUR_PI_IP_ADDRESS". The only task that should fail is the final reboot task - the Pi will already be rebooting, so it can't report back that the task finished successfully. 
+Now we're on to the good stuff - actually running our playbook! On your Mac's terminal, navigate to the folder that you cloned ansible-pi to, then run "`ansible-playbook -s -i hosts ansible-pi.yml`". This tells Ansible to run our root playbook with sudo access using the hosts file from the repo. You should see the task names start to read out to your terminal. For a brand new Pi, each task should say the task name, and then a status message that should read "changed: YOUR_PI_IP_ADDRESS". The only task that should fail is the final reboot task - the Pi will already be rebooting, so it can't report back that the task finished successfully.
 
 ### Making sure it worked
 After you've run the ansible playbook, SSH back into your Pi. If you type "`ls`" in the home directory, you should only see the init folder that we transferred over. That means that your configuration worked, and you should be good to start using your Pi!
-
-

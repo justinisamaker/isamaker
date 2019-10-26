@@ -5,7 +5,7 @@ niceDate: "January 25th, 2015"
 teaser: "Creating a button to text me how long I have to get to my L stop before I'm late for work."
 category: blog-post
 tags: [arduino, edison, maker]
-image: /assets/img/trainTracker/cta.jpg
+featuredImage: cta.jpg
 ---
 
 I've got around a ten minute walk to my closest train station every morning. Depending on how late I'm running and if I'm hustling or not, that time can swing from eight to twelve minutes. It seems like every time I try to do the eight-minute run, I always end up getting to the station right as my train is pulling away. To help better predict how much time I have to catch a train, I made a button that can figure out when the next train arrives. Once it gets the time, it sends me a text to my phone - that way I can hit the button on my way out the door and not worry about it until I make it to the bottom of my stairs.
@@ -163,5 +163,3 @@ In the terminal window that has your Bloop session open, type 'node traintracker
 If you don't receive a text, take a look at the output in the terminal. The code will return an error telling you what you're missing. Make sure that you replaced all the CTA and Twilio API keys, as well as the Twilio numbers.
 
 If your button is working, now you can hit it on the way out your door and have you marching orders texted to you right away. Yay, Internet!
-
-

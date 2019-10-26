@@ -4,7 +4,7 @@ title:  "En Las Tablas"
 date:   2015-04-22 00:18:42
 category: core-project
 teaser: "A pro-bono project for an incredible non-profit built during the Nerdery's Overnight Website Challenge."
-image: /assets/img/elt/elt-thumbnail.jpg
+featuredImage: elt-thumbnail.jpg
 external_link: http://enlastablas.org
 weight: 20
 tags: [web]
@@ -14,7 +14,7 @@ En Las Tablas is a wonderful non-profit that operates in the Hermosa neighborhoo
 
 I got involved with En Las Tablas through the Nerdery's Overnight Website Challenge. I convinced a group of 9 of my colleagues from Critical Mass to stay up for 24 hours attempting to build and launch a website for a non-profit that needed one. We were paired with ELT during the speed dating portion of the event that took place a week before the kickoff - we had an instant connection with the two ladies who run the organization, and we were thrilled to work with them.
 
-<div class="paragraph-with-picture left"> 
+<div class="paragraph-with-picture left">
   <p>ELT was a little unique in regards to the event's participants in that they already had a website. The website was built by a relative of one of the organizers, and had not been updated in some time. While they were grateful for the existing site, it was definitely time for a face lift.
   </p>
 

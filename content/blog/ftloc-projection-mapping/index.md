@@ -5,7 +5,7 @@ niceDate: "February 18th, 2015"
 teaser: "Turning a room into a psychedelic hallucination with Resolume, Magic Music Visualizer, and a custom-built cupcake controller running on Arduino."
 category: blog-post
 tags: [projectionMapping, arduino, maker]
-image: /assets/img/ftloc/ftloc-teaser.jpg
+featuredImage: ftloc-teaser.jpg
 ---
 
 I've been interested in projection mapping ever since I saw what <a href="http://www.lvthn.com/work/wooden-toy/" target="_blank">Leviathan</a> and <a href="http://vsquaredlabs.com/project/amon-tobin/">V Squared Labs</a> came up with for <a href="https://www.youtube.com/watch?v=0zMI-qbmIPk" target="_blank">Amon Tobin's ISAM tour</a>. I wasn't able to attend the concert in person, but even just watching the footage inspired a sense of awe in me. The whole project seemed like it was a <a href="http://en.wikipedia.org/wiki/Clarke%27s_three_laws" target="_blank">combination of magic and technology</a>, and I knew that I had to work with it.

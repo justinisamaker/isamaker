@@ -5,7 +5,7 @@ niceDate: "June 30th, 2017"
 teaser: "Changing the way we think about solar potential."
 category: blog-post
 tags: [fjord]
-image: /assets/img/solar/solar.jpg
+featuredImage: solar.jpg
 ---
 
 My work at Fjord jumps between all sorts of different disciplines, but the part that I love the most is when I get to live up to the true creative technologist title. With the rapid climb of IoT devices, it's undeniable that customers need to have ways to interact with an idea outside of a screen. The solar calculator project is an excellent example of that sweet spot between physical and digital.

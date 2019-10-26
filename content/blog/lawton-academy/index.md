@@ -5,11 +5,11 @@ niceDate: "January 29th, 2017"
 teaser: "A website redesign for my high school alma mater, a school that focuses on bringing out the best in its students."
 category: blog-post
 tags: [wordpress, freelance, web]
-image: /assets/img/lawtonAcademy/lawton-academy-logo.png
+featuredImage: lawton-academy-logo.png
 external_link: http://lawtonacademy.com
 ---
 
-I was lucky enough to attend an excellent school during my high school years. Now that I'm well past that part of my life, I wanted to give back to the school and help in their success. The school, the Lawton Academy of Arts & Sciences, is a small non-religious private school in Lawton, Oklahoma. The school was founded by my grandmother in 1999 - she had just retired from a fifty-year career in various roles with public schools in Lawton. Her career culminated with her serving as the superintendent of a magnet school. People from the community came to her when she retired and asked her to start a non-religiously-affiliated private school. At the time the only options for private education in Lawton were Catholic or hardline Southern Baptist schools, and the town was losing people like surgeons and engineers that didn't want to put their kids into that kind of education. She started the school with my granddad, and now my grandparents and my parents all teach there. 
+I was lucky enough to attend an excellent school during my high school years. Now that I'm well past that part of my life, I wanted to give back to the school and help in their success. The school, the Lawton Academy of Arts & Sciences, is a small non-religious private school in Lawton, Oklahoma. The school was founded by my grandmother in 1999 - she had just retired from a fifty-year career in various roles with public schools in Lawton. Her career culminated with her serving as the superintendent of a magnet school. People from the community came to her when she retired and asked her to start a non-religiously-affiliated private school. At the time the only options for private education in Lawton were Catholic or hardline Southern Baptist schools, and the town was losing people like surgeons and engineers that didn't want to put their kids into that kind of education. She started the school with my granddad, and now my grandparents and my parents all teach there.
 
 {% include imageWithCaption.html size="large" imageSrc="/assets/img/lawtonAcademy/lawton-academy-1.jpg" caption="Tinkering to inspire students to explore" %}
 

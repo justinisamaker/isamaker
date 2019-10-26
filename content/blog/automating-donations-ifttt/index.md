@@ -5,7 +5,7 @@ niceDate: "February 7th, 2017"
 teaser: "Automatically put money towards a donation every time something gets mentioned in the news."
 category: blog-post
 tags: [ifttt, qapital, automation, financial, activism, donation]
-image: /assets/img/iftttDonations/iftttDonationsScreenshot.jpg
+featuredImage: iftttDonationsScreenshot.jpg
 ---
 One of the great trends that has come out of the past few years of technological advancement is the move towards simplifying previously complex tasks for folks who don't want to write code. This simplification opens the door for people to use technology in new and inventive ways, spanning from DIY home automation all the way over to activism. I'd like to touch a bit on the activism side today - an aspect of advancement that seems to be needed now more than ever.
 

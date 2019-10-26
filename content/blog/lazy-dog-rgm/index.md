@@ -5,7 +5,7 @@ niceDate: "March 12th, 2018"
 teaser: "Creating a giant Rube Goldberg Machine to celebrate spring with Lazy Dog Restaurants."
 category: blog-post
 tags: [freelance, buildout]
-image: /assets/img/rgm/rgm-teaser.jpg
+featuredImage: rgm-teaser.jpg
 external_link: https://www.lazydogrestaurants.com/theultimatemachine
 ---
 

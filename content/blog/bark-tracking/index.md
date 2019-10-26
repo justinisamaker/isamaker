@@ -5,7 +5,7 @@ niceDate: "January 18th, 2015"
 teaser: "Listening for loud dog barks in my apartment and then logging the data to Phant.io through Node.js on an Edison."
 category: blog-post
 tags: [arduino, edison, maker]
-image: /assets/img/barkTracker/king.jpg
+featuredImage: king.jpg
 ---
 
 A couple of years ago my landlord informed me that the shop that I was living behind would be expanding in to my apartment. He wasn't sure of the exact timeline, but he was sure of the fact that we would need to move in the near future. This was the first apartment that my girlfriend and I rented together&mdash;and our first "real" Chicago apartment&mdash;you can imagine how bummed we were. To soften the blow, we decided that we would start looking for an apartment that would allow a dog.
@@ -121,7 +121,3 @@ Once everything is loaded and configured, navigate to the root folder of your pr
 
 #### Experiment Results
 I was constantly refreshing the data.sparkfun feed the first few days that I was running the tracker. Much to my dismay, the tracker was logging a noise almost every five minutes. I came home ready to go apologize to my neighbors for my unruly dog and swear to them that he doesn't do this while we're home. The third day that I ran it, I left it running while I took King out for a walk when I got home. When I came back in, the tracker had been registering the entire time that we were gone. After a little threshold adjusting, I was able to hone in on the right values and get a good read. Turns out that he was only barking a few times a day, and a little white noise in the apartment reduced that even more.
-
-
-
-

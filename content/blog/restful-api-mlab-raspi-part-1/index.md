@@ -5,7 +5,7 @@ niceDate: "February 2nd, 2017"
 teaser: "Learn how to use mLab's cloud-hosted MongoDB instances to make data-heavy development on the Pi a lot easier."
 category: blog-post
 tags: [raspberrypi, pi, hardware, javascript, mongo, node, express, mlab]
-image: /assets/img/mLab/mlab-logo.png
+featuredImage: mlab-logo.png
 ---
 
 The Raspberry Pi tends to end up in a lot of projects that benefit from collecting, storing, and analyzing data - when you have a full computer that costs 35 bucks, it makes sense to attach to everything that you want to learn from! There are plenty of options on what to do with the data you collect, but my absolute favorite so far has been working with MongoDB through mLab. This post will walk you through setting up a basic server in Node that will let you push data from you Pi up to mLab's cloud-hosted MongoDB instances.
@@ -22,7 +22,7 @@ The Raspberry Pi tends to end up in a lot of projects that benefit from collecti
 </div>
 
 ### Added a user to our database
-Once your mLab deployment is created, go ahead and click into it, then click the "users" tab. We'll need to add an admin user to interact with our database. Create a user called "admin" with a strong password, and leave the "read-only" box un-checked. 
+Once your mLab deployment is created, go ahead and click into it, then click the "users" tab. We'll need to add an admin user to interact with our database. Create a user called "admin" with a strong password, and leave the "read-only" box un-checked.
 
 ### Setting up Node on a Pi with NVM
 If you're running the latest instance of Raspbian Jessie, the Pi should already have Node installed. If you need help getting your Pi set up with Raspbian, <a href="/ansible-pi" target="_new">check out my other blog post about standing up a headless Pi with Ansible</a>. We could certainly run with this pre-installed version of Node, but it's a very old version, and we want the new shiny stuff. In addition to that, we want to be able to switch between versions for different projects. To handle this switching, we're going to install something called <a href="https://github.com/creationix/nvm" target="_new">Node Version Manager</a>, or NVM for short. <a href="https://github.com/blobsmith/raspberryTestNode/wiki/Node.js-installation-with-nvm-on-Raspberry-pi" target="_new">Here's the set of instructions that I've followed to accomplish this.</a> Feel free to hop over to Blobsmith's GitHub and follow his guide, or you can just keep reading here to get the gist of it.
@@ -108,10 +108,10 @@ We've got our main route covered, now we need to tell the app about the database
 var mongoose = require('mongoose');
 var mongoAddress = 'mongodb://<dbUser>:<dbPassword>@<yourDBUrl>/<yourDBName>';
 
-var options = { 
-  server:{ 
-    socketOptions:{ 
-      keepAlive: 300000, connectTimeoutMS: 30000 
+var options = {
+  server:{
+    socketOptions:{
+      keepAlive: 300000, connectTimeoutMS: 30000
     }
   },
   replset:{
@@ -155,7 +155,7 @@ var piTempModel = require('./app/models/piTempModel');
 {% endhighlight %}
 
 ### Creating a model
-We've got our model set up, so now we need to actually create the model. We'll do this in our index route file. First we need to install another NPM package to be able to read the system temp. Run "`npm install --save child_process`" from the root of your project to install the new package, then navigate back to editing your routes/index.js file. That child_process package will only be used for this index route right now, so we can include that in the variable declarations at the top of the file. 
+We've got our model set up, so now we need to actually create the model. We'll do this in our index route file. First we need to install another NPM package to be able to read the system temp. Run "`npm install --save child_process`" from the root of your project to install the new package, then navigate back to editing your routes/index.js file. That child_process package will only be used for this index route right now, so we can include that in the variable declarations at the top of the file.
 
 {% highlight javascript %}
 var exec = require('child_process').exec;
@@ -239,12 +239,7 @@ cron.schedule('*/20 * * * *', function(){
 });
 {% endhighlight %}
 
-Now you should get an initial reading when you first start your server, and then an additional reading every twenty minutes as long as the Pi is running your server code. 
+Now you should get an initial reading when you first start your server, and then an additional reading every twenty minutes as long as the Pi is running your server code.
 
 ### Next steps: the RUD part of CRUD
 In the next tutorial, I'll go over how to adapt this code to cover the rest of our CRUD operations. With the additional actions, you'll be able to read all the documents in your database, read a specific document, update a specific document, and delete a specific document. Part two of this series is coming soon.
-
-
-
-
-

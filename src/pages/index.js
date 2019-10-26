@@ -28,6 +28,7 @@ class BlogIndex extends React.Component {
 
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
+          let image = node.frontmatter.featuredImage.childImageSharp.fluid.src;
           return (
             <Link key={node.fields.slug} to={node.fields.slug} className="project">
               <div className="project-title">
@@ -36,13 +37,13 @@ class BlogIndex extends React.Component {
 
               <div className="project-info">
                 <h3>{title}</h3>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <p dangerouslySetInnerHTML={{ __html: node.frontmatter.teaser }} />
               </div>
 
               <div className="project-overlay"></div>
 
               <div className="project-image"
-                style={{ backgroundImage: `url(/${node.frontmatter.image})` }}>
+                style={{ backgroundImage: `url(${image})` }}>
               </div>
             </Link>
           );
@@ -71,7 +72,14 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            image
+            teaser
+            featuredImage {
+              childImageSharp{
+                fluid(maxWidth:800){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

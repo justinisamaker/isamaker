@@ -5,7 +5,7 @@ niceDate: "October 10th, 2017"
 teaser: "When your friend asks if you want to build a giant trebuchet for Cards Against Humanity, how do you say no?"
 category: blog-post
 tags: [freelance, buildout]
-image: /assets/img/trebuchet/trebuchet.jpg
+featuredImage: trebuchet.jpg
 ---
 
 No matter where you stand on political issues, I think that we can all agree that we are living in strange times. Back in October of 2017, I was contacted by my good friend Roman Titus with an offer to help him build a 30-foot trebuchet on the Mexican border to support the <a href="https://www.cardsagainsthumanitysavesamerica.com/" target="_new">Cards Against Humanity Saves America</a> Campaign. When a friend calls you with that pitch, how in the world do you turn them down?

@@ -4,7 +4,7 @@ title:  "Gigity.tv"
 date:   2015-04-22 00:16:45
 category: core-project
 teaser: "The project that got me serious about web development. Check out how I helped a small startup completely redesign their brand and website."
-image: /assets/img/gigity/gigity-thumbnail.jpg
+featuredImage: gigity-thumbnail.jpg
 external_link: http://gigity.tv
 weight: 40
 tags: [freelance, web]
@@ -14,7 +14,7 @@ When I was first getting in to building websites, Gigity.tv gave me the chance t
 
 I'm a very firm believer that experience is the best teacher. If I could go back and do my college education over again, I would have gotten an internship every semester after my freshman year. With that said, we all have to start somewhere, and when I started at Gigity I was barely functional in regards to front-end development. Luckily Oliver Holmberg, the sole developer on Gigity, took me under his wing and showed me the ropes - the man has the patience of a saint.
 
-During my internship, I produced a new logo for the company, helped overhaul the styles on the front-end of the site, produced a new page to help them win VC pitches, and collaborated with Oliver to laser cut a few pieces to clean up the mobile rig and make it look more professional. More recently, I helped them out with the front-end of the mobile version of their app that lets users broadcast live from events to the Gigity platform with their smartphones. 
+During my internship, I produced a new logo for the company, helped overhaul the styles on the front-end of the site, produced a new page to help them win VC pitches, and collaborated with Oliver to laser cut a few pieces to clean up the mobile rig and make it look more professional. More recently, I helped them out with the front-end of the mobile version of their app that lets users broadcast live from events to the Gigity platform with their smartphones.
 
 The experience that I had with Gigity was invaluable. I've maintained a relationship with the guys to this day picking up the spare freelance project for Rich Seng, the owner and dreamer who comes up with a slew of crazy ideas to keep everyone busy. Needless to say, I wouldn't be the developer that I am today if they hadn't given me a shot way back when.
 
