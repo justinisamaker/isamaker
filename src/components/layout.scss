@@ -10,3 +10,10 @@
   grid-gap:1.5em;
   padding:1.5em;
 }
+
+.post-content{
+  display:grid;
+  grid-template-columns: 1fr 70% 1fr;
+  grid-template-areas: ". content .";
+  padding:1.5em;
+}

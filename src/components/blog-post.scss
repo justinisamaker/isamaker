@@ -1,0 +1,79 @@
+/* ==========================================================================
+   BLOG-POST.SCSS
+   - Styles for blog posts
+   ========================================================================== */
+ @import "./main.scss";
+
+ .post-content-container{
+   grid-area: content;
+
+   h3{
+    @include raleway;
+    font-size:1.4em;
+    line-height:1.5em;
+    color:$darkBlue;
+    text-align:center;
+    margin: 2em auto 1em auto;
+    font-weight:700;
+  }
+
+  h4{
+    border-bottom:1px solid $blue;
+    padding-bottom:0.3em;
+    margin:2.5em auto 0.6em auto;
+    @include raleway;
+    font-size:1.3em;
+    line-height:1.3em;
+    color:$darkBlue;
+  }
+
+  p, ol{
+    @include body-copy;
+    font-size:1em;
+    line-height:1.5em;
+    margin-bottom:1.5em;
+  }
+
+  ol{
+    padding-left:em(15px);
+    list-style-type: decimal;
+
+    li{
+      margin-bottom:em(10px);
+    }
+  }
+ }
+
+ .paragraph-with-picture{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   grid-gap:3em;
+ }
+
+ /*
+   IMAGES
+   ========================================================================== */
+
+.image-container{
+  width:100%;
+}
+
+.image-caption{
+  display:block;
+  width:100%;
+  @include no-link-styles;
+  text-align:right;
+  color:$teal;
+  font-size:0.7em !important;
+  margin-top:0.8em;
+  transition:color 0.1s ease-in-out;
+
+  &:hover{
+    color:$darkBlue;
+    transition:color 0.1s ease-in-out;
+
+    &:before{
+      display:none !important;
+    }
+  }
+}
