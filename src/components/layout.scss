@@ -1,7 +1,12 @@
 .container{
   display:grid;
-  grid-template-columns:1fr 85%;
-  grid-column-gap:1em;
+  grid-template-columns:1fr 87%;
   height:100%;
+}
 
+.home-content{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:1em;
+  padding:1em;
 }

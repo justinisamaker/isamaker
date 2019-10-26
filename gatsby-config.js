@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog MDX`,
-    author: `Matt Hagner`,
-    description: `An extension of the gatsby starter blog, with support for MDX`,
-    siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,
+    title: `Justin is a Maker`,
+    author: `Justin Smith`,
+    description: `The personal portfolio for Justin Smith, a creative technologist from Chicago, IL.`,
+    siteUrl: `https://justin.isamaker.com/`,
     social: {
-      twitter: `mattinthecouch`,
+      instagram: `justinisamaker`,
     },
   },
   plugins: [
@@ -23,6 +23,14 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/svgs`,
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -126,22 +134,28 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Justin is a Maker`,
+        short_name: `JustinisaMaker`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/jts-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        fonts: [
+          {
+            family: `Raleway`,
+            subsets: [`latin`],
+            variants: [`400`, `700`]
+          }
+        ]
+      }
     },
   ],
 }

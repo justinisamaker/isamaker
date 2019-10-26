@@ -5,7 +5,7 @@ niceDate: "April 2nd, 2018"
 teaser: "Using technology to create the perfect environment for growing mushrooms."
 category: blog-post
 tags: [freelance, buildout]
-image: /assets/img/sojourn/sojourn.jpg
+image: sojourn.jpg
 external_link: http://sojournfare.com
 ---
 

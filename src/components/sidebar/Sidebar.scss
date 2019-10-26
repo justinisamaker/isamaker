@@ -6,6 +6,10 @@
   border-right:1px solid $black;
 }
 
+.logo-link{
+  position:fixed;
+}
+
 .jts-logo{
   background:$white;
   transition:background, 0.2s, ease-in-out;

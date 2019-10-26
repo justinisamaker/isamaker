@@ -6,7 +6,7 @@ import Logo from '../../svgs/jts-logo.svg';
 const Sidebar = () => {
   return(
     <aside className="main-sidebar">
-      <Link to="/">
+      <Link to="/" className="logo-link">
         <Logo className="jts-logo"/>
         <h1 className="header-title">Justin<br/>Smith</h1>
       </Link>

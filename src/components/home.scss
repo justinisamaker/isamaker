@@ -1,0 +1,93 @@
+/* ==========================================================================
+   HOME.SCSS
+   - Styles for the homepage
+   ========================================================================== */
+ @import "./main.scss";
+
+.project{
+  display:block;
+  transition:all 0.2s ease-in-out;
+  height:15em;
+  overflow:hidden;
+  position:relative;
+  border:1px solid $darkBlue;
+
+  &:hover{
+    @include no-appearance();
+    .project-info, .project-overlay{
+      top:0;
+      transition:top 0.2s ease-in-out;
+    }
+
+    .project-title{
+      top:-50px;
+      transition:top 0.2s ease-in-out;
+    }
+  }
+}
+
+.project-image, .project-info, .project-overlay, .project-title{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.project-title{
+  height:auto;
+  background:$white;
+  border-bottom:1px solid $darkBlue;
+  z-index:30;
+  transition:top 0.2s ease-in-out;
+  color:$darkBlue;
+
+  h2{
+    font-size:0.8em;
+    margin:0.2em 0.5em;
+  }
+}
+
+.project-info, .project-overlay{
+  top:15em;
+  transition:top 0.2s ease-in-out;
+}
+
+.project-overlay{
+  display:block;
+  background:$darkBlue;
+  z-index:20;
+  opacity:0.9;
+}
+
+.project-image{
+  background-size:cover;
+  background-position:top center;
+  z-index:10;
+}
+
+.project-info{
+  z-index:30;
+
+  h3{
+    margin:1em;
+    font-size:1em;
+    line-height:1.2em !important;
+    @include raleway;
+    font-weight:700;
+    color:$white;
+    border-bottom:1px solid $white;
+    padding-bottom:0.4em;
+    margin-bottom:0.5em;
+    padding-left:0.5em;
+  }
+
+  p{
+    margin:0 1.7em;
+    color:$white !important;
+    @include no-link-styles;
+    @include body-copy;
+    font-size:0.9em;
+    line-height:1.4em;
+  }
+}
