@@ -4,26 +4,19 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import PostHeader from '../components/postheader/PostHeader';
 import '../components/blog-post.scss';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-    console.log(this.props.pageContext)
+    const post = this.props.data.mdx;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <header className="post-content-header">
-          { post.frontmatter.externalLink ?
-            <a href={post.frontmatter.externalLink} className="post-external-link" target="_new">View the live version of {post.frontmatter.title} <span class="right-arrow">&raquo;</span></a>
-            : null
-          }
-          <h1>{post.frontmatter.title}</h1>
-          <p className="meta">{post.frontmatter.date}</p>
-        </header>
+        <PostHeader title={post.frontmatter.title} date={post.frontmatter.date} link={post.frontmatter.externalLink} />
         <main className="post-content-container">
           <MDXRenderer>{post.body}</MDXRenderer>
           <hr />

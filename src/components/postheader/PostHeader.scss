@@ -1,0 +1,37 @@
+/* ==========================================================================
+   PostHeader.SCSS
+   - Styles for the header shown at the top of blog posts
+   ========================================================================== */
+
+@import '../main.scss';
+
+.post-content-header{
+  grid-area:post-header;
+  border-bottom:1px solid $darkBlue;
+  margin-bottom:2em;
+  padding-bottom:1em;
+  padding-top:1em;
+
+  h1{
+    @include raleway;
+    color: $darkBlue;
+    font-size:2em;
+    line-height:1.3em;
+    margin-bottom:-0.1em;
+  }
+
+  .meta{
+    font-size:0.8em;
+    color:$teal;
+  }
+}
+
+.post-external-link{
+  color:$darkBlue;
+  text-align:right;
+  @include raleway;
+  float:right;
+  display:block;
+  margin-top:1.9em;
+  font-size:1em;
+}
