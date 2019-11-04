@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Sidebar from './sidebar/Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 
-import './main.scss';
-import './layout.scss';
+import '../main.scss';
+import './Layout.scss';
 
 class Layout extends React.Component {
   render() {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 import SEO from '../components/seo';
 import PostHeader from '../components/postheader/PostHeader';
 import PostFooter from '../components/postfooter/PostFooter';
