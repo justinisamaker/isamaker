@@ -1,0 +1,49 @@
+/* ==========================================================================
+   PostFooter.SCSS
+   - Styles for the footer shown at the bottom of blog posts
+   ========================================================================== */
+
+@import '../main.scss';
+
+.post-content-footer{
+  grid-area: post-footer;
+  padding-bottom:6em;
+
+  ul{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+
+  li{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+
+  .previous-post{
+    text-align:left;
+  }
+
+  .next-post{
+    text-align:right;
+  }
+}
+
+.post-external-link-footer{
+  display:block;
+  margin:2em auto 3em auto;
+  background:$darkBlue;
+  color:$white;
+  text-align:center;
+  padding:1em 0;
+  transition:background 0.2s ease-in-out;
+
+  &:hover{
+    background:$blue;
+    color:$white !important;
+    transition:background 0.2s ease-in-out;
+  }
+}

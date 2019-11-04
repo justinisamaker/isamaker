@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import PostHeader from '../components/postheader/PostHeader';
+import PostFooter from '../components/postfooter/PostFooter';
 import '../components/blog-post.scss';
 
 class BlogPostTemplate extends React.Component {
@@ -19,25 +20,8 @@ class BlogPostTemplate extends React.Component {
         <PostHeader title={post.frontmatter.title} date={post.frontmatter.date} link={post.frontmatter.externalLink} />
         <main className="post-content-container">
           <MDXRenderer>{post.body}</MDXRenderer>
-          <hr />
-
-          <ul>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
         </main>
+        <PostFooter title={post.frontmatter.title} link={post.frontmatter.externalLink} previous={previous} next={next}/>
       </Layout>
     )
   }
