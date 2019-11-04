@@ -11,6 +11,8 @@
   margin-bottom:2em;
   padding-bottom:1em;
   padding-top:1em;
+  display:grid;
+  grid-template-columns:65% 1fr;
 
   h1{
     @include raleway;
@@ -30,8 +32,8 @@
   color:$darkBlue;
   text-align:right;
   @include raleway;
-  float:right;
   display:block;
   margin-top:1.9em;
   font-size:1em;
+  line-height:1.3em;
 }
