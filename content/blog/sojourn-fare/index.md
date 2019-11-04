@@ -1,12 +1,9 @@
 ---
-layout: post
 title:  "Sojourn Fare"
-niceDate: "April 2nd, 2018"
+date: "2018-04-02T00:00:00-0500"
 teaser: "Using technology to create the perfect environment for growing mushrooms."
-category: blog-post
-tags: [freelance, buildout]
 featuredImage: sojourn.jpg
-external_link: http://sojournfare.com
+externalLink: http://sojournfare.com
 ---
 
 Sojourn Fare creates environmental control units that help people grow mushrooms, cure meat, make cheese, and a whole host of other applications. Back in the fall of 2016, Roman Titus reached out to see if I could help him with a small Arduino project. Now that we're two years into the project, it's grown to be so much more.

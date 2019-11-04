@@ -14,6 +14,10 @@
 .post-content{
   display:grid;
   grid-template-columns: 1fr 70% 1fr;
-  grid-template-areas: ". content .";
+  grid-auto-rows:auto;
+  grid-template-areas:
+    ". post-header ."
+    ". content ."
+    ". post-footer .";
   padding:1.5em;
 }

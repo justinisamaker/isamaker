@@ -4,10 +4,40 @@
    ========================================================================== */
  @import "./main.scss";
 
- .post-content-container{
-   grid-area: content;
+.post-content-header{
+  grid-area:post-header;
+  border-bottom:1px solid $darkBlue;
+  margin-bottom:2em;
+  padding-bottom:1em;
+  padding-top:1em;
 
-   h3{
+  h1{
+    @include raleway;
+    color: $darkBlue;
+    font-size:2em;
+    line-height:1.3em;
+    margin-bottom:-0.1em;
+  }
+
+  .meta{
+    font-size:0.8em;
+    color:$teal;
+  }
+}
+
+.post-external-link{
+  color:$darkBlue;
+  text-align:right;
+  @include raleway;
+  float:right;
+  display:block;
+  margin-top:1.9em;
+}
+
+.post-content-container{
+  grid-area: content;
+
+  h3{
     @include raleway;
     font-size:1.4em;
     line-height:1.5em;
@@ -39,16 +69,16 @@
     list-style-type: decimal;
 
     li{
-      margin-bottom:em(10px);
+    margin-bottom:em(10px);
     }
   }
- }
+}
 
- .paragraph-with-picture{
-   display:grid;
-   grid-template-columns:1fr 1fr;
-   grid-gap:3em;
- }
+.paragraph-with-picture{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:3em;
+}
 
  /*
    IMAGES

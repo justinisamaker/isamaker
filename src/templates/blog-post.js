@@ -17,11 +17,15 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <main className="post-content-container">
+        <header className="post-content-header">
+          { post.frontmatter.externalLink ?
+              <a href={post.frontmatter.externalLink} className="post-external-link" target="_new">View the live version of {post.frontmatter.title} <span class="right-arrow">&raquo;</span></a>
+            : null
+          }
           <h1>{post.frontmatter.title}</h1>
-          <p>
-            {post.frontmatter.date}
-          </p>
+          <p className="meta">{post.frontmatter.date}</p>
+        </header>
+        <main className="post-content-container">
           <MDXRenderer>{post.body}</MDXRenderer>
           <hr />
           <Bio />
@@ -64,6 +68,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        externalLink
       }
       body
     }
