@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import '../components/blog-post.scss';
@@ -19,7 +18,7 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <header className="post-content-header">
           { post.frontmatter.externalLink ?
-              <a href={post.frontmatter.externalLink} className="post-external-link" target="_new">View the live version of {post.frontmatter.title} <span class="right-arrow">&raquo;</span></a>
+            <a href={post.frontmatter.externalLink} className="post-external-link" target="_new">View the live version of {post.frontmatter.title} <span class="right-arrow">&raquo;</span></a>
             : null
           }
           <h1>{post.frontmatter.title}</h1>
@@ -28,7 +27,6 @@ class BlogPostTemplate extends React.Component {
         <main className="post-content-container">
           <MDXRenderer>{post.body}</MDXRenderer>
           <hr />
-          <Bio />
 
           <ul>
             <li>
