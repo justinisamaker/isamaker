@@ -68,8 +68,7 @@ Now that your sensor is plugged in, power your Edison is powered on again. Once 
 
 The code we're writing is fairly simply. All we're going to do is listen to the sensor, and when we hear a noise above a certain level, send the data off to our feed. You can find the code on my <a href="https://github.com/justinisamaker/barktracker" target="_new">GitHub</a>, but I'd much rather you read through the code below and see what's going on.
 
-```js react-live
-
+```javascript
 // Require libraries
 var m = require('mraa');
 var request = require('request');
