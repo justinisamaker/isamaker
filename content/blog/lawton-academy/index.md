@@ -13,11 +13,14 @@ I was lucky enough to attend an excellent school during my high school years. No
   <a class="image-caption">Tinkering to inspire students to explore</a>
 </div>
 
-The school focuses on bringing out the best in students, and I know that I wouldn't be the same today if I hadn't been exposed to the school during my formative years. My grandmother (along with other non-related instructors) pushed me to explore the arts, which ultimately led to me attend the School of the Art Institute of Chicago. <a href="http://www.lawtonacademyrobotics.com/" target="_new">Our robotics team</a> exposed me to basic circuitry and engineering and sparked a passion for tinkering. It was an amazing experience, and I knew that I wanted to help the organization succeed and impact more childrens' lives.
+<div class="paragraph-with-picture">
+  <p>The school focuses on bringing out the best in students, and I know that I wouldn't be the same today if I hadn't been exposed to the school during my formative years. My grandmother (along with other non-related instructors) pushed me to explore the arts, which ultimately led to me attend the School of the Art Institute of Chicago. <a href="http://www.lawtonacademyrobotics.com/" target="_new">Our robotics team</a> exposed me to basic circuitry and engineering and sparked a passion for tinkering. It was an amazing experience, and I knew that I wanted to help the organization succeed and impact more childrens' lives.</p>
 
-<div class="image-container large-image">
-  <img src="./lawton-academy-2.jpg" alt="The robot from the 2016 robotics season" />
-  <a class="image-caption">The robot from the 2016 robotics season</a>
+  <div class="image-container small-image">
+    <img src="./lawton-academy-2.jpg" alt="The robot from the 2016 robotics season" />
+    <a class="image-caption">The robot from the 2016 robotics season</a>
+  </div>
+
 </div>
 
 It's easy to make associations and assumptions about private schooling, but I feel like this was a very different experience than "traditional" private schools. I entered the school when my family completed our circle of moving for the Army - we moved back to Fort Sill, the town where I was born, after bouncing all over the Bible Belt. I was just entering my 9th grade year, and the school was just starting their high school program. Because the school was still developing, attending the school was very much like being an early customer for a startup - if we wanted something from the school, we helped them create it. That attitude definitely molded my character and philosophy of taking on large projects that still need shaping.
