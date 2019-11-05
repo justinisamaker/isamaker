@@ -7,7 +7,7 @@
 
 .post-content-footer{
   grid-area: post-footer;
-  padding-bottom:6em;
+  padding-bottom:2em;
 
   ul{
     display:grid;
@@ -38,12 +38,19 @@
   background:$darkBlue;
   color:$white;
   text-align:center;
-  padding:1em 0;
+  padding:1em;
   transition:background 0.2s ease-in-out;
 
   &:hover{
     background:$blue;
     color:$white !important;
     transition:background 0.2s ease-in-out;
+  }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width : $medium) {
+  .post-content-footer{
+    padding-bottom:6em;
   }
 }

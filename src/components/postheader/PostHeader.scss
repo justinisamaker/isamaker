@@ -12,7 +12,7 @@
   padding-bottom:1em;
   padding-top:1em;
   display:grid;
-  grid-template-columns:65% 1fr;
+  grid-template-columns:1fr;
 
   h1{
     @include raleway;
@@ -30,10 +30,31 @@
 
 .post-external-link{
   color:$darkBlue;
-  text-align:right;
   @include raleway;
   display:block;
-  margin-top:1.9em;
+  margin-top:0.9em;
+  padding-top:1em;
   font-size:1em;
   line-height:1.3em;
+  border-top:1px solid $darkBlue;
+}
+
+.external-link-break{
+  display:none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width : $medium) {
+  .post-content-header{
+    grid-template-columns:65% 1fr;
+  }
+
+  .post-external-link{
+    text-align:right;
+    border-top:0;
+  }
+
+  .external-link-break{
+    display:block;
+  }
 }
