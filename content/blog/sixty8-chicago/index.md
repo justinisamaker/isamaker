@@ -1,13 +1,10 @@
 ---
-layout: post
 title:  "Sixty8 Chicago"
-date:   2015-04-22 00:13:10
+date: "2015-04-22T00:00:00-0500"
 category: core-project
 teaser: "A clean website built for an even cleaner grooming product. Sixty8 Chicago makes pomades and other barber-related items for the discerning customer."
 featuredImage: sixty8-thumbnail.jpg
-external_link: http://sixty8chicago.com
-weight: 10
-tags: [web, freelance]
+externalLink: http://sixty8chicago.com
 ---
 
 A clean website built for an even cleaner grooming product. Sixty8 Chicago makes pomades and other barber-related items for the discerning gentleman, and I was lucky enough to build the website for their product launch.
@@ -20,8 +17,12 @@ The site runs on a built-from-scratch fully-responsive Wordpress theme in order 
 
 In addition to the standard e-commerce needs, the site includes a series of utilities to facilitate wholesale purchasing. Sixty8 needs to vet their wholesalers in order to maintain the reputation of the product, so I built them a system where folks could apply for wholesale priveleges. Once the application is submitted, Joe is able to vet the applicant and see if they cut the mustard. If they're approved, wholesalers have the option to makes bulk purchases that aren't available to regular users.
 
-Check out the full site at <a href="http://sixty8chicago.com" target="_blank">sixty8chicago.com</a>.
-
-{% include imageWithCaption.html size="half" imageSrc="/assets/img/sixty8/sixty8-homepage.jpg" caption="Sixty8 Home Page" %}
-
-{% include imageWithCaption.html size="half" imageSrc="/assets/img/sixty8/sixty8-product-page.jpg" caption="Sixty8 Product Page" %}
+<div class="image-container large-image">
+  <img src="./sixty8-homepage.jpg" alt="Sixty8 Home Page" />
+  <a class="image-caption">Sixty8 Home Page</a>
+</div>
+<br/><br/>
+<div class="image-container large-image">
+  <img src="./sixty8-product-page.jpg" alt="Sixty8 Product Page" />
+  <a class="image-caption">Sixty8 Product Page</a>
+</div>
