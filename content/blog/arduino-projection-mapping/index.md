@@ -1,10 +1,7 @@
 ---
-layout: post
 title:  "Arduino-Controlled Projection Mapping"
-niceDate: "February 18th, 2015"
+date: "2015-02-18T00:00:00-0500"
 teaser: "Turning a room into a psychedelic hallucination with Resolume, Magic Music Visualizer, and a custom-built cupcake controller running on Arduino."
-category: blog-post
-tags: [projectionMapping, arduino, maker]
 featuredImage: ftloc-teaser.jpg
 ---
 
@@ -12,10 +9,14 @@ I've been interested in projection mapping ever since I saw what <a href="http:/
 
 My interest stayed dormant for a few years until I recieved a Tweet out of the blue asking if I wanted to collaborate to make something "collossal." How do you say no to that?
 
-<div class="paragraph-with-picture left">
+<div class="paragraph-with-picture">
 	<p>The message came from an artist named <a href="http://georgeberlin.com/" target="_blank">George Berlin</a>. George's background is in illustration, but he's also well-versed in animation and projection mapping. He explained to me that he was wrestling with how to control his projects with objects in the real world. The software that he uses to control the projections can be mapped to a MIDI controller, but interacting with a controller takes a lot of magic out of the visualization.</p>
 
-	{% include imageWithCaption.html size="small" imageSrc="/assets/img/ftloc/midi-controller.jpg" caption="Traktor X1 by sebilden" link="https://www.flickr.com/photos/sebilden/13107904853/in/photolist-kYirrx-cMizwA-4ZHL9q-4YDdRY-4ZBGTD-4YDdRj-4YDdSA-7FWaZK-75TB6u-bHqmAZ-buvCk3-buvmKW-buvFcw-bHqcrV-buvuNu-9UCdcZ-etdr3o-4YDdT9-ghNPB-bzyEVx-4ZFXvv-7ig5hv-7ig5bt-7ijYAm-7ig5av-7ijYHd-7ijYHW-7GaRos-8w4FKU-6n1VSX-nPrtTp-o6Q8a1-nPraJj-nPrCqJ-o6Cxhc-nPrgfQ-nPrcjJ-o6PSwJ-nPsbgB-6n5Mb1-c8JyEY-75WLAN-cWDnzf-7uxE2f-fYE3S-oYk5pr-oFQYy2-2zXBBD-dWsJyU-fYDZy" %}
+  <div class="image-container small-image">
+    <img src="./midi-controller.jpg" alt="Traktor X1 by sebilden" />
+    <a href="https://www.flickr.com/photos/sebilden/13107904853/in/photolist-kYirrx-cMizwA-4ZHL9q-4YDdRY-4ZBGTD-4YDdRj-4YDdSA-7FWaZK-75TB6u-bHqmAZ-buvCk3-buvmKW-buvFcw-bHqcrV-buvuNu-9UCdcZ-etdr3o-4YDdT9-ghNPB-bzyEVx-4ZFXvv-7ig5hv-7ig5bt-7ijYAm-7ig5av-7ijYHd-7ijYHW-7GaRos-8w4FKU-6n1VSX-nPrtTp-o6Q8a1-nPraJj-nPrCqJ-o6Cxhc-nPrgfQ-nPrcjJ-o6PSwJ-nPsbgB-6n5Mb1-c8JyEY-75WLAN-cWDnzf-7uxE2f-fYE3S-oYk5pr-oFQYy2-2zXBBD-dWsJyU-fYDZy" target="_new" class="image-caption">Traktor X1 by sebilden</a>
+  </div>
+
 </div>
 
 We agreed to get in touch if we bumped into an interesting project that seemed like it would be a good fit, and after a few misses due to scheduling conflicts we got the perfect opportunity. I was contacted by an old friend, <a href="http://andreagonzalez.info" target="_blank">Andrea Gonazalez</a>, who was looking for a piece for a fundraiser. Andrea is an excellent artist who went to <a href="http://www.saic.edu/index.html" target="_blank">SAIC</a> with me - she recently decided to leave the design industry to pursue her passion for French pastries. The fundraiser was an event for the <a href="http://frenchpastryschool.com" target="_blank">French Pastry School</a> called "<a href="http://www.fortheloveofchocolatefoundation.org/" target="_blank">For the Love of Chocolate</a>." The theme for the event was the '60s, and she needed a projection to transform a room into a psychedelic landscape. The room that we were in came complete with a sitar band called <a href="http://www.thegitacult.com/" target="_blank">"The Gita Cult,"</a> and a seemingly endless supply of delicious treats. This seemed like a great opportunity for a collaborative project with the ever-funky George, so we started brainstorming.
@@ -27,22 +28,32 @@ Like I mentioned earlier, George has the projection mapping thing down pat, so w
 #### Resolume
 We used a program called <a href="http://resolume.com/" target="_blank">Resolume</a> to handle the projection mapping and Arduino-controlled effects. Resolume is a pretty amazing piece of software - even just playing around with the examples is impressive.
 
-{% include imageWithCaption.html size="large" imageSrc="/assets/img/ftloc/resolume-screenshot.jpg" caption="A screenshot of the Resolume Dashboard" %}
+<div class="image-container large-image">
+  <img src="./resolume-screenshot.jpg" alt="A screenshot of the Resolume Dashboard" />
+  <a class="image-caption">A screenshot of the Resolume Dashboard</a>
+</div>
 
 As you can see in the image above, the Resolume dashboard can be a little overwhleming at first. The general idea is that you work in compositions that group clips together for a certain arrangement. Clips are housed in the upper right quarter of the dashboard, and are queued to start playing on the first beat of the music. There are some clips that have audio baked into the file - the visuals of these files react to tempo changes from the attached audio. You set the tempo for a composition the same way that you set it for DJing&ndash;by clicking a tap button along with the count of the music.
 
 Resolume can also add a layer of visual effects to each clip, or to the entire compostion. The effects interface is what we were interested in using it for. The visualizations that we were generating wouldn't actually be generated in Resolume - we just needed an additional layer of control and the mapping. But before we get to mapping, let's talk about how we generated the visuals to map.
 
 #### Magic Music Visuals
-<div class="paragraph-with-picture right">
-	{% include imageWithCaption.html size="small" imageSrc="/assets/img/ftloc/magic-music-visuals-screenshot.jpg" caption="A screenshot of Magic Music Visuals" link="http://magicmusicvisuals.com/screenshots"%}
-
+<div class="paragraph-with-picture">
 	<p>George was the brains behind the visuals for this project, but I still wanted to learn how he was generating them to get a better understanding of the piece end-to-end. He introduced me to a program called <a href="http://magicmusicvisuals.com/" target="_blank">Magic Music Visuals</a>. For those of you familiar with <a href="https://cycling74.com/products/max/" target="_blank">Max/MSP</a>, Magic Music Visuals (henceforth to be referred to as "MMV") is extremely similar. You interact with a set of modules by patching them together in series to create a visual circuit.</p>
+
+  <div class="image-container small-image">
+    <img src="./magic-music-visuals-screenshot.jpg" alt="A screenshot of Magic Music Visuals" />
+    <a href="http://magicmusicvisuals.com/screenshots" target="_new" class="image-caption">A screenshot of Magic Music Visuals</a>
+  </div>
+
 </div>
 
 George has tons of these patches that he uses in his projects. To facilitate the use of the different visuals throughout the evening, we included everything in a playlist to feed the display.
 
-{% include imageWithCaption.html size="large" imageSrc="/assets/img/ftloc/magic-music-visuals.gif" caption="Adding patches to the playlist in MMV" %}
+<div class="image-container large-image">
+  <img src="./magic-music-visuals.gif" alt="Adding patches to the playlist in MMV" />
+  <a class="image-caption">Adding patches to the playlist in MMV</a>
+</div>
 
 In addition to creating some trippy visuals with George's graphic assets, MMV also handled the sound-reactive bits for us. Modules in the patch are routed through a sound-reactive module before hitting the endpoint - that module responds to a specific frequency range from a mic input, or to the overall volume. Once it sees a spike in whatever you're listening to, you can tell it what it should do to your visuals.
 
@@ -66,20 +77,26 @@ Once we had MMV broadcasting to a Syphon server, the next step was to get Resolu
 Getting the visuals together and ported into Resolume was the easy part - now we had to come up with something to do with them. The original plan was to send MIDI signals from the Arduino into Resolume, and then use Resolume MIDI mapping to control the desired effects. George was able to reproduce some simple keymapping from real world objects using the <a href="http://makeymakey.com/" target="_blank">Makey Makey</a>, but what we really wanted was to be able to control the effects with a potentiometer, which is just a ten-dollar word for a slider or a volume knob. After putzing around with sending MIDI signals from the Arduino with irregular success, I decided to switch over to the <a href="http://opensoundcontrol.org/introduction-osc" target="_blank">Open Sound Control</a> (OSC) protocol. OSC ended up being a lot less complicated, and I think that it's more extensible in the long run.
 
 #### Cupcake Time!
-<div class="paragraph-with-picture left">
+<div class="paragraph-with-picture">
 	<p>We had it in our heads from the get-go that we wanted to incorporate cupcakes into the project somehow. A lot of George's past work uses cake as a recurring theme, so the migration over to cupcakes seemed to come pretty natural for him. I snagged six plastic cupcakes from Toys"R"Us that ended up being a perfect fit for the project.</p>
 
-  {% include imageWithCaption.html size="small" imageSrc="/assets/img/ftloc/toysrus-cupcakes.jpg" caption="The toy cupcakes we used from Toys'R'Us" link="http://www.toysrus.com/product/index.jsp?productId=45704966&cp=&parentPage=search"%}
+  <div class="image-container small-image">
+    <img src="./toysrus-cupcakes.jpg" alt="The toy cupcakes we used from Toys'R'Us" />
+    <a class="image-caption">The toy cupcakes we used from Toys'R'Us</a>
+  </div>
+
 </div>
 
 #### Enclosure Build and Arduino Wiring
 
-I got a small wooden box from a craft store to use as a project enclosure. Once everything was measured out, I drilled a hole through the middle of the plastic cupcakes big enough to fit a potentiometer handle through, then mounted them to the box. Once I had that, I wired my potentiometers, drilled holes in the box, and then mounted them so that only the handle was sticking out the top.
+<div class="paragraph-with-picture">
+  <p>I got a small wooden box from a craft store to use as a project enclosure. Once everything was measured out, I drilled a hole through the middle of the plastic cupcakes big enough to fit a potentiometer handle through, then mounted them to the box. Once I had that, I wired my potentiometers, drilled holes in the box, and then mounted them so that only the handle was sticking out the top.</p>
 
-<div class="three-up">
-  <img src="/assets/img/ftloc/drilled-cupcake.jpg" alt="Plastic cupcake with the mounting hole drilled" class="three-up-vert">
-	<img src="/assets/img/ftloc/measured-cupcake-box.jpg" alt="Project enclosure with measurements" class="three-up-hor">
-	<img src="/assets/img/ftloc/mounted-cupcake.jpg" alt="Cupcake mounted on the project enclosure" class="three-up-vert">
+  <div class="image-container small-image">
+    <img src="./measured-cupcake-box.jpg" alt="Project enclosure with measurements" />
+    <a class="image-caption">Project enclosure with measurements</a>
+  </div>
+
 </div>
 
 With all of my potentiometers ready to go, it was time to start hooking components up to the Arduino. I decided to use an Arduino Micro that that I had sitting around to free up some space inside the box - all that we needed was six analog inputs, and the Micro had more than enough juice to power the project. The potentiometers were connected to the power source and ground from the Arduino, and then each of their outputs was sent to the first six analog inputs on the micro. All we needed the Arduino to do was to read the values from the potentiometers, and then broadcast that value as a string.
@@ -87,7 +104,7 @@ With all of my potentiometers ready to go, it was time to start hooking componen
 #### Arduino Code
 The code portion for the Arduino is extremely straightforward. The Arduino reads a few values and then sends them on through the serial port. The only gotcha is that the code needs to send everything as one string, so inside the loop we're only using `Serial.print` until the last line where we use `Serial.println` to trigger a new line.
 
-{% highlight java %}
+```java
 // Arduino code to read multiple potentiometers, then send
 // the values through serial communication
 
@@ -110,13 +127,13 @@ void loop(){
   Serial.println(analogRead(potentiometer_pins[5]));
 }
 
-{% endhighlight %}
+```
 
 #### Processing Code
 
 The next part of the puzzle was how to convert that analog value coming from the Arduino to an OSC message. This was accomplished by using the OSC library in Processing. The gist of the code is that we're taking the string that the Arduino's serial communication is pumping out, splitting it into an array, getting the values from the array, and then sending them to the appropriate port.
 
-{% highlight java %}
+```java
 
 // Import the Serial, OSC, and net libraries
 import processing.serial.*;
@@ -221,12 +238,15 @@ void serialEvent(Serial myPort) {
     }
   }
 }
-{% endhighlight %}
+```
 
 #### Back to Resolume
 You may be wondering what the parts of the Processing code that set the OscMessage are doing and where we got those values from. Resolume allows you to map OSC values to any number of things inside the software. To edit this map, all you need to do is select "Mapping > Edit Application OSC Map." That should change your screen to look like the screenshot below.
 
-{% include imageWithCaption.html size="large" imageSrc="/assets/img/ftloc/resolume-mapping-screenshot.jpg" caption="Resolume ready for OSC mapping" %}
+<div class="image-container large-image">
+  <img src="./resolume-mapping-screenshot.jpg" alt="Resolume ready for OSC mapping" />
+  <a class="image-caption">Resolume ready for OSC mapping</a>
+</div>
 
 When you click on a green box that overlays something, a tile will pop up in the lower right-hand side with the title "Application OSC Map." In the screenshot, I have the green channel for the composition selected. The piece we need is the "OSC Input" string. If you look back at the Processing code now, you'll see that all we're doing is setting the new OscMessage parts to equal the correct string from OSC Input in Resolume.
 
@@ -238,14 +258,13 @@ There is a distinction between composition and layer as to what the effects do t
 
 #### Code Recap
 There are a lot of moving parts with this project, so I ended up making a checklist to make sure that everything was flowing in the correct order.
-<ol>
-  <li>Visuals are generated in MMV</li>
-  <li>MMV Visuals are sent through the MMV Syphon Component</li>
-  <li>Resolume listens to MMV via a Syphon clip</li>
-  <li>Arduino reads the value of the potentiometers and then sens a string through serial</li>
-  <li>Processing picks up that serial string and then creates OSC messages to send to Resolume</li>
-  <li>Resolume receives OSC messages and changes composition-level effects</li>
-</ol>
+
+1. Visuals are generated in MMV
+1. MMV Visuals are sent through the MMV Syphon Component
+1. Resolume listens to MMV via a Syphon clip
+1. Arduino reads the value of the potentiometers and then sens a string through serial
+1. Processing picks up that serial string and then creates OSC messages to send to Resolume
+1. Resolume receives OSC messages and changes composition-level effects
 
 #### Resolume Mapping
 Since I was just projecting on a simple set of shapes in the corner of the room, I used the built-in mapping dialog inside Resolume to handle mapping the projection. It should be noted that this is only a feature in Resolume Arena, and does not come standard with Avenue. If you need more complex mapping, <a href="http://visution.com/mapio" target="_blank">Mapio</a> seems to be an excellent alternative.
@@ -270,8 +289,4 @@ Here are a few photos and videos from the event:
 <div class="video-wrapper">
   <iframe width="100%" height="480" src="https://www.youtube.com/embed/G8PFUX36wB0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
-
-
-
-
-<!-- ![Here's a kitten](http://placekitten.com/g/700/400 "Hoorary kitten") -->
+<br/>

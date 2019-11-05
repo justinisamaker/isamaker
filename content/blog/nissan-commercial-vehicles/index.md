@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "Nissan Commercial Vehicles"
-date:   2015-04-21 23:25:07
-category: core-project
+date: "2015-04-21T00:00:00-0500"
 teaser: "My main account at Critical Mass. Take a look at how I worked with my team to build new features and overhaul the old stuff for the commercial branch of Nissan."
-tags: [web]
 featuredImage: ncv-thumbnail-2.jpg
-external_link: http://nissancommercialvehicles.com
-weight: 0
+externalLink: http://nissancommercialvehicles.com
 ---
 
 Nissan Commercial Vehicles is, you guessed it, the commercial branch of Nissan. They manufacture a series of fantastic work vehicles that you've undoubtedly seen all over town - as soon as you know what one looks like, you can't stop seeing it. I've had the pleasure of working with a small team from Critical Mass based entirely out of our Chicago office. Working with a close-knit group like that can sometimes be a rarity in the agency world, especially in agencies who have offices all over the world, and I wouldn't trade that experience for anything.
@@ -18,10 +14,15 @@ We've facilitated a pretty major overhaul of the look and feel of the site in th
 
 For instace, during the homepage redesign we took the homepage from this:
 
-<div class="half-image-container">
-  {% include imageWithCaption.html size="half" imageSrc="/assets/img/ncv/ncv-home-old.jpg" caption="Old NCV Homepage" %}
-
-  {% include imageWithCaption.html size="half" imageSrc="/assets/img/ncv/ncv-home.jpg" caption="New NCV Homepage" %}
+<div class="image-container half-image">
+  <div>
+    <img src="./ncv-home-old.jpg" alt="Old NCV Homepage" />
+    <a class="image-caption">Old NCV Homepage</a>
+  </div>
+  <div>
+    <img src="./ncv-home.jpg" alt="New NCV Homepage" />
+    <a class="image-caption">New NCV Homepage</a>
+  </div>
 </div>
 
 Screenshots can only do so much - to fully experience the site, you should definitely go and check it out at <a href="http://nissancommercialvehicles.com" target="_blank">nissancommericalvehicles.com</a>. Some of the pages that I've had the most involvement with are the <a href="http://nissancommercialvehicles.com" target="_blank">home page</a>, the vehicle landing pages for the <a href="http://www.nissancommercialvehicles.com/nv-cargo" target="_blank">NV Cargo</a>, the <a href="http://www.nissancommercialvehicles.com/nv-passenger" target="_blank">NV Passenger</a>, and the <a href="http://www.nissancommercialvehicles.com/nv200-compact-cargo" target="_blank">NV200 Compact Cargo</a>, our <a href="http://www.nissancommercialvehicles.com/way-you-work" target="_blank">"Desinged for the Way You Work"</a> campaign, and the launch of the <a href="http://www.nissancommercialvehicles.com/nv200-taxi" target="_blank">NV200 Taxi</a> for its maiden voyage in NYC.
