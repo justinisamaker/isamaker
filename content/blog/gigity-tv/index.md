@@ -1,13 +1,9 @@
 ---
-layout: post
 title:  "Gigity.tv"
-date:   2015-04-22 00:16:45
-category: core-project
+date: "2015-04-22T00:00:00-0500"
 teaser: "The project that got me serious about web development. Check out how I helped a small startup completely redesign their brand and website."
 featuredImage: gigity-thumbnail.jpg
-external_link: http://gigity.tv
-weight: 40
-tags: [freelance, web]
+externalLink: http://gigity.tv
 ---
 
 When I was first getting in to building websites, Gigity.tv gave me the chance that I needed to start getting serious and actually build out a production-ready site. Gigity is a small startup based in Chicago that provides streaming services for venues all around the nation. When I started my internship there, the entire company consisted of two guys, one permanent installation at the Double Door, and one mobile installation that we would cart around to different venues. Five years later it's still just two guys running the whole operation, but they've grown their reach drastically, and are now installed in 18 venues in Chicago, Hollywood, Nashville, and Austin.
@@ -20,6 +16,12 @@ The experience that I had with Gigity was invaluable. I've maintained a relation
 
 Check out the site at <a href="http://gigity.tv" target="_blank">Gigity.tv</a> and catch a broadcast or two - you can see what's live tonight or watch an archived broadcast. It's hard to beat watching a live show from the comfort of your couch if you're spending the night in.
 
-{% include imageWithCaption.html size="half" imageSrc="/assets/img/gigity/gigity-home.jpg" caption="Gigity.tv Home Page" %}
-
-{% include imageWithCaption.html size="half" imageSrc="/assets/img/gigity/gigity-broadcast.jpg" caption="Gigity.tv Broadcast" %}
+<div class="image-container large-image">
+  <img src="./gigity-home.jpg" alt="Gigity.tv Home Page" />
+  <a class="image-caption">Gigity.tv Home Page</a>
+</div>
+<br/><br/>
+<div class="image-container large-image">
+  <img src="./gigity-broadcast.jpg" alt="Gigity.tv Broadcast" />
+  <a class="image-caption">Gigity.tv Broadcast</a>
+</div>
