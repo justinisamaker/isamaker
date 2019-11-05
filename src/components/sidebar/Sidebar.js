@@ -1,4 +1,5 @@
-import { Link } from 'gatsby';
+import TransitionLink from 'gatsby-plugin-transition-link';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import React from 'react';
 import './Sidebar.scss';
 import Logo from '../../svgs/jts-logo.svg';
@@ -6,10 +7,10 @@ import Logo from '../../svgs/jts-logo.svg';
 const Sidebar = () => {
   return(
     <aside className="main-sidebar">
-      <Link to="/" className="logo-link">
+      <AniLink cover bg="url(/stardust2.png) repeat" direction="right" className="logo-link">
         <Logo className="jts-logo"/>
         <h1 className="header-title">Justin<br/>Smith</h1>
-      </Link>
+      </AniLink>
 
       <section className="sidebar-info">
         <div className="specialities">

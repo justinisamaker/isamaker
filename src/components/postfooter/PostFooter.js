@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import TransitionLink from 'gatsby-plugin-transition-link';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import './PostFooter.scss';
 
 class PostFooter extends React.Component{
@@ -14,16 +15,16 @@ class PostFooter extends React.Component{
         <ul>
           {this.props.previous && (
             <li className="previous-post">
-              <Link to={this.props.previous.fields.slug} rel="prev">
+              <AniLink cover bg="url(/stardust2.png) repeat" direction="left" to={this.props.previous.fields.slug} rel="prev">
                 ← {this.props.previous.frontmatter.title}
-              </Link>
+              </AniLink>
             </li>
           )}
           {this.props.next && (
             <li className="next-post">
-              <Link to={this.props.next.fields.slug} rel="next">
+              <AniLink cover bg="url(/stardust2.png) repeat" direction="right" to={this.props.next.fields.slug} rel="next">
                 {this.props.next.frontmatter.title} →
-              </Link>
+              </AniLink>
             </li>
           )}
         </ul>

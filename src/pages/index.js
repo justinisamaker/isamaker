@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import TransitionLink from 'gatsby-plugin-transition-link';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Layout from '../components/layout/Layout';
 import SEO from '../components/seo';
@@ -30,7 +32,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug;
           let image = node.frontmatter.featuredImage.childImageSharp.fluid.src;
           return (
-            <Link key={node.fields.slug} to={node.fields.slug} className="project">
+            <AniLink cover bg="url(/stardust2.png) repeat" direction="left" key={node.fields.slug} to={node.fields.slug} className="project">
               <div className="project-title">
                 <h2>{title}</h2>
               </div>
@@ -45,7 +47,7 @@ class BlogIndex extends React.Component {
               <div className="project-image"
                 style={{ backgroundImage: `url(${image})` }}>
               </div>
-            </Link>
+            </AniLink>
           );
         })}
       </Layout>
