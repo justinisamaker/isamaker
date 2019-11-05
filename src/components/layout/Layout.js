@@ -16,7 +16,6 @@ class Layout extends React.Component {
       <div className="container">
         <Sidebar siteTitle={title} />
         <div className={contentContainer}>
-          {/* {header} */}
           {children}
         </div>
       </div>
