@@ -1,16 +1,16 @@
 ---
-layout: post
 title:  "Chicago Transit Authority Train Time Texter"
-niceDate: "January 25th, 2015"
+date: "2015-01-25T00:00:00-0500"
 teaser: "Creating a button to text me how long I have to get to my L stop before I'm late for work."
-category: blog-post
-tags: [arduino, edison, maker]
 featuredImage: cta.jpg
 ---
 
 I've got around a ten minute walk to my closest train station every morning. Depending on how late I'm running and if I'm hustling or not, that time can swing from eight to twelve minutes. It seems like every time I try to do the eight-minute run, I always end up getting to the station right as my train is pulling away. To help better predict how much time I have to catch a train, I made a button that can figure out when the next train arrives. Once it gets the time, it sends me a text to my phone - that way I can hit the button on my way out the door and not worry about it until I make it to the bottom of my stairs.
 
-{% include imageWithCaption.html size="large" imageSrc="/assets/img/trainTracker/cta.jpg" caption="Photo by Clark Maxwell" link="http://www.flickr.com/photos/clarkmaxwell/" %}
+<div class="image-container large-image">
+  <img src="./cta.jpg" alt="Photo by Clark Maxwell" />
+  <a href="http://www.flickr.com/photos/clarkmaxwell/" target="_new" class="image-caption">Photo by Clark Maxwell</a>
+</div>
 
 Making a button that can talk to the Internet sounds kind of involved, but it's actually pretty easy when you use a microcontroller like the Intel Edison. When the Edison hears a click from a button that's attached to it, it uses JavaScript to make a call to the Chicago Transit Authority's API, and then another call to Twilio to send me a text. Let's take a look at how to make it!
 
@@ -20,16 +20,12 @@ Full disclosure&mdash;I'm working on a Mac, so these instructions will skew that
 While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_blank">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card - you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_blank">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
 
 #### Hook Up Your Button
-<div class="paragraph-with-picture left">
-	<p>If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button - the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.</p>
+If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button - the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.
 
-	{% include imageWithCaption.html size="small" imageSrc="/assets/img/trainTracker/sparkfun-big-red-button.jpg" caption="Big Dome Pushbutton from Sparkfun" link="https://www.sparkfun.com/products/9181" %}
+<div class="image-container large-image">
+  <img src="./sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" />
+  <a href="https://www.sparkfun.com/products/9181" target="_new" class="image-caption">Sparkfun's Big Red Button</a>
 </div>
-
-#### Bells &amp; Whistles - a 3D Printed Case
-I 3D printed a case for my Edison using <a href="https://www.thingiverse.com/thing:457434" target="_blank">a design from Thingiverse</a>. The case uses the screws for the struts to secure the lid, and has two slots for the shield pins to go through. I did have to drill an extra hole in the lid for the ISP pins, but other than that everything fits great.
-
-{% include imageWithCaption.html size="large" imageSrc="/assets/img/barkTracker/edison-case.jpg" caption="3D Printed Intel Edison Case by Michael Jassowski" link="http://www.thingiverse.com/thing:457434" %}
 
 ### Code Time
 We're going to be using MRAA, Node.js, the Chicago Transit Authority's API, and Twilio to handle the communication for this project. MRAA is the C library that lets us talk to the Edison through JavaScript. It works with a lot of different flavors of Intel products, and has a similar syntax to "regular" Arduino code. We could write this code as a regular Arduino program, but this puppy can run Node, so why not?
@@ -46,7 +42,7 @@ In addition to the CTA API key, you'll also need a Twilio key. If you aren't alr
 #### Write the Code
 Now that you've got your API stuff all sorted out, we can actually write the code that's going to be running this stuff. Code be found on GitHub, but come on, write it out yourself and get a good understanding of it.
 
-{% highlight javascript %}
+```javascript
 // Require Node libraries
 var mraa = require('mraa');
 var request = require('request');
@@ -155,7 +151,7 @@ function checkButtonPress(){
 
 // call the init function
 init();
-{% endhighlight %}
+```
 
 #### Run Your Code
 In the terminal window that has your Bloop session open, type 'node traintracker.js' in the root of your project folder. This should start the JS running. Check your terminal to see if the Edison gave back the MRAA version - if it did, you're all good to go. Go ahead and press the button, and then wait for your text.
