@@ -1,15 +1,24 @@
-import TransitionLink from 'gatsby-plugin-transition-link';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import React from 'react';
-import './Sidebar.scss';
-import Logo from '../../svgs/jts-logo.svg';
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import React from 'react'
+import './Sidebar.scss'
+import Logo from '../../svgs/jts-logo.svg'
 
 const Sidebar = () => {
-  return(
+  return (
     <aside className="main-sidebar">
-      <AniLink cover bg="url(/stardust2.png) repeat" direction="right" className="logo-link">
-        <Logo className="jts-logo"/>
-        <h1 className="header-title">Justin<br/>Smith</h1>
+      <AniLink
+        cover
+        bg="url(/stardust2.png) repeat"
+        direction="right"
+        className="logo-link"
+      >
+        <Logo className="jts-logo" />
+        <h1 className="header-title">
+          Justin
+          <br />
+          Smith
+        </h1>
       </AniLink>
 
       <section className="sidebar-info">
@@ -20,12 +29,16 @@ const Sidebar = () => {
         </div>
 
         <div className="social">
-          <a href="https://github.com/justinisamaker" target="_new">GitHub</a>
-          <a href="http://instagram.com/justinisamaker" target="_new">Instagram</a>
+          <a href="https://github.com/justinisamaker" target="_new">
+            GitHub
+          </a>
+          <a href="http://instagram.com/justinisamaker" target="_new">
+            Instagram
+          </a>
         </div>
       </section>
     </aside>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar
