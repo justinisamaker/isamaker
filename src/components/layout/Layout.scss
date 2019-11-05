@@ -1,15 +1,16 @@
+/* ==========================================================================
+   LAYOUT.SCSS
+   - General layout styles
+   ========================================================================== */
+@import "../main.scss";
+
 .container{
   height:100%;
 }
 
-.home-content, .post-content{
-  width:83%;
-  margin-left:13%;
-}
-
 .home-content{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:1fr;
   grid-gap:1.5em;
   padding:1.5em;
 }
@@ -23,4 +24,22 @@
     ". content ."
     ". post-footer .";
   padding:1.5em;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width : $medium) {
+  .home-content, .post-content{
+    width:83%;
+    margin-left:13%;
+  }
+
+  .home-content{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width : $extra-large) {
+  .home-content{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
 }

@@ -2,15 +2,20 @@
 
 .main-sidebar{
   background:url('../../images/stardust.png') repeat;
-  padding:1em;
-  border-right:1px solid $black;
-  position:fixed;
-  width:10%;
-  height:96%;
+  padding:1em 1.5em 1.5em 1.5em;
+  border-bottom:1px solid $black;
+  height:auto;
+  display:grid;
+  grid-template-columns:1fr 40% 25%;
+  grid-template-areas:
+    "logo . info";
 }
 
 .logo-link{
-  position:fixed;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap:1em;
+  grid-area: logo;
 }
 
 .jts-logo{
@@ -35,9 +40,7 @@
 }
 
 .sidebar-info{
-  position:absolute;
-  bottom:1.7em;
-  left:1em;
+  grid-area:info;
 }
 
 .social, .specialities{
@@ -51,6 +54,8 @@
 }
 
 .social{
+  text-align:right;
+
   a{
     display:block;
 
@@ -61,6 +66,39 @@
 }
 
 .specialities{
+  display:none;
   border-bottom:1px solid $white;
   margin-bottom:0.7em;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width : $medium) {
+  .main-sidebar{
+    padding:1em;
+    border-bottom:0;
+    border-right:1px solid $black;
+    position:fixed;
+    width:10%;
+    height:96%;
+    display:block;
+  }
+
+  .logo-link{
+    display:block;
+  }
+
+  .sidebar-info{
+    width:75%;
+    position:absolute;
+    bottom:1.7em;
+    left:1em;
+  }
+
+  .specialities{
+    display:block;
+  }
+
+  .social{
+    text-align:left;
+  }
 }
