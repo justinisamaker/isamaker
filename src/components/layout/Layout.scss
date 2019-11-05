@@ -1,7 +1,10 @@
 .container{
-  display:grid;
-  grid-template-columns:1fr 87%;
   height:100%;
+}
+
+.home-content, .post-content{
+  width:83%;
+  margin-left:13%;
 }
 
 .home-content{
