@@ -19,32 +19,32 @@ class PostFooter extends React.Component {
         ) : null}
         <hr />
         <ul>
-          {this.props.previous && (
-            <li className="previous-post">
-              <AniLink
-                cover
-                bg="url(/stardust2.png) repeat"
-                direction="left"
-                to={this.props.previous.fields.slug}
-                rel="prev"
-              >
-                ← {this.props.previous.frontmatter.title}
-              </AniLink>
-            </li>
-          )}
-          {this.props.next && (
-            <li className="next-post">
+          <li className="next-post">
+            {this.props.next ? (
+                <AniLink
+                  cover
+                  bg="url(/stardust2.png) repeat"
+                  direction="left"
+                  to={this.props.next.fields.slug}
+                  rel="prev"
+                >
+                  ← {this.props.next.frontmatter.title}
+                </AniLink>
+            ) : '' }
+          </li>
+          <li className="previous-post">
+            {this.props.previous ? (
               <AniLink
                 cover
                 bg="url(/stardust2.png) repeat"
                 direction="right"
-                to={this.props.next.fields.slug}
+                to={this.props.previous.fields.slug}
                 rel="next"
               >
-                {this.props.next.frontmatter.title} →
+                {this.props.previous.frontmatter.title} →
               </AniLink>
-            </li>
-          )}
+            ) : ''}
+          </li>
         </ul>
       </footer>
     )
