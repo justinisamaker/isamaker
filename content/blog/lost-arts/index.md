@@ -17,11 +17,14 @@ I'd be lying if I didn't mention that I'm partial to a particular space, though.
 
 The first version of the space was invite-only. Charles seems to know everyone, and he curated a list of people that he knew would be good for the space. I participated in the space purely by luck and happenstance. In June of 2015, I left my agency position to go on a mini-sabbatical and make more of the physical work that I was yearning to make. I put in my two weeks without having too much of a plan for a next step, and <a href="http://www.gavinmorrissey.com/" target="_new">Gavin Morrissey</a>, a good friend and brilliant motion graphics artist, recommended that I go check out Lost Arts. I showed up at the front door of the warehouse and explained my situation to Charles - "Hey, I don't have a place to work for the next few months, and I'd love to work here." After a quick conversation, we realized that I could help out by setting up and maintaining the fleet of 3D printers at the space, and I was subsequently given access to Lost Arts for the month.
 
-Charles and I clicked, and I started seeking out other ways that I could help make sure that the experiment succeeded. One of the obvious ways that I could help was by creating a website for the space. I'm happy to say that the second iteration of Lost Arts opened in the summer of 2016, and we're moving on to open another (hopefully permanent) version sometime in the near future.
+<div class="paragraph-with-picture">
+  <p>Charles and I clicked, and I started seeking out other ways that I could help make sure that the experiment succeeded. One of the obvious ways that I could help was by creating a website for the space. I'm happy to say that the second iteration of Lost Arts opened in the summer of 2016, and we're moving on to open another (hopefully permanent) version sometime in the near future.</p>
 
-<div class="image-container large-image">
-  <img src="./lost-arts-wood-shop.jpg" alt="The wood shop side of Lost Arts" />
-  <a href="https://www.instagram.com/p/BN-FHivhARj/?taken-by=lostarts" target="_new" class="image-caption">The wood shop side of Lost Arts</a>
+  <div class="image-container small-image">
+    <img src="./lost-arts-wood-shop.jpg" alt="The wood shop side of Lost Arts" />
+    <a href="https://www.instagram.com/p/BN-FHivhARj/?taken-by=lostarts" target="_new" class="image-caption">The wood shop side of Lost Arts</a>
+  </div>
+
 </div>
 
 The website for Lost Arts needed to reflect the vibrant and diverse community that gathers at the space, but it also needed to be easily maintained by folks who never wanted to touch code. As with many of my other projects, we decided that Wordpress was the right tool for this job.

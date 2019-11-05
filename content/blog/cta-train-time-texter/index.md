@@ -20,11 +20,15 @@ Full disclosure&mdash;I'm working on a Mac, so these instructions will skew that
 While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_blank">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card - you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_blank">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
 
 #### Hook Up Your Button
-If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button - the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.
 
-<div class="image-container large-image">
-  <img src="./sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" />
-  <a href="https://www.sparkfun.com/products/9181" target="_new" class="image-caption">Sparkfun's Big Red Button</a>
+<div class="paragraph-with-picture">
+  <p>If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button - the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.</p>
+
+  <div class="image-container small-image">
+    <img src="./sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" />
+    <a href="https://www.sparkfun.com/products/9181" target="_new" class="image-caption">Sparkfun's Big Red Button</a>
+  </div>
+
 </div>
 
 ### Code Time

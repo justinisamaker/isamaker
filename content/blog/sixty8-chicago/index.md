@@ -17,12 +17,13 @@ The site runs on a built-from-scratch fully-responsive Wordpress theme in order 
 
 In addition to the standard e-commerce needs, the site includes a series of utilities to facilitate wholesale purchasing. Sixty8 needs to vet their wholesalers in order to maintain the reputation of the product, so I built them a system where folks could apply for wholesale priveleges. Once the application is submitted, Joe is able to vet the applicant and see if they cut the mustard. If they're approved, wholesalers have the option to makes bulk purchases that aren't available to regular users.
 
-<div class="image-container large-image">
-  <img src="./sixty8-homepage.jpg" alt="Sixty8 Home Page" />
-  <a class="image-caption">Sixty8 Home Page</a>
-</div>
-<br/><br/>
-<div class="image-container large-image">
-  <img src="./sixty8-product-page.jpg" alt="Sixty8 Product Page" />
-  <a class="image-caption">Sixty8 Product Page</a>
+<div class="image-container half-image">
+  <div>
+    <img src="./sixty8-homepage.jpg" alt="Sixty8 Home Page" />
+    <a class="image-caption">Sixty8 Home Page</a>
+  </div>
+  <div>
+    <img src="./sixty8-product-page.jpg" alt="Sixty8 Product Page" />
+    <a class="image-caption">Sixty8 Product Page</a>
+  </div>
 </div>

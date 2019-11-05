@@ -73,6 +73,10 @@
 
 .image-container{
   width:100%;
+  
+  img{
+    border:1px solid $black;
+  }
 
   &.half-image{
     display:grid;

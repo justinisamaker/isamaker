@@ -16,12 +16,13 @@ The experience that I had with Gigity was invaluable. I've maintained a relation
 
 Check out the site at <a href="http://gigity.tv" target="_blank">Gigity.tv</a> and catch a broadcast or two - you can see what's live tonight or watch an archived broadcast. It's hard to beat watching a live show from the comfort of your couch if you're spending the night in.
 
-<div class="image-container large-image">
-  <img src="./gigity-home.jpg" alt="Gigity.tv Home Page" />
-  <a class="image-caption">Gigity.tv Home Page</a>
-</div>
-<br/><br/>
-<div class="image-container large-image">
-  <img src="./gigity-broadcast.jpg" alt="Gigity.tv Broadcast" />
-  <a class="image-caption">Gigity.tv Broadcast</a>
+<div class="image-container half-image">
+  <div>
+    <img src="./gigity-home.jpg" alt="Gigity.tv Home Page" />
+    <a class="image-caption">Gigity.tv Home Page</a>
+  </div>
+  <div>
+    <img src="./gigity-broadcast.jpg" alt="Gigity.tv Broadcast" />
+    <a class="image-caption">Gigity.tv Broadcast</a>
+  </div>
 </div>
