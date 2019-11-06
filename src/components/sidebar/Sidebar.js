@@ -29,6 +29,9 @@ const Sidebar = () => {
         </div>
 
         <div className="social">
+          <a href="https://www.linkedin.com/in/justinisamaker/" target="_new">
+            LinkedIn
+          </a>
           <a href="https://github.com/justinisamaker" target="_new">
             GitHub
           </a>

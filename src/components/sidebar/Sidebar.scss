@@ -47,9 +47,11 @@
   h2, a{
     @include raleway;
     font-size:0.6em;
-    line-height:1.7em;
+    line-height:2.5em;
     color:$white;
     text-transform:uppercase;
+    margin:0;
+    padding:0;
   }
 }
 
@@ -68,6 +70,7 @@
 .specialities{
   display:none;
   border-bottom:1px solid $white;
+  padding-bottom:0.7em;
   margin-bottom:0.7em;
 }
 
