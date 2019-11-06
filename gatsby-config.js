@@ -169,6 +169,15 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-61160746-1",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 }
