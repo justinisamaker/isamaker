@@ -21,15 +21,20 @@ function HomeIntro() {
                 <p>
                   I'm a maker who loves to explore new technologies. My work
                   blends front-end development, fine arts, and years of
-                  involvement in the maker and startup communities.{' '}
+                  involvement in the maker and startup communities. I work
+                  primarily with MERN stacks (Mongo, Express, React, Node), and
+                  also have extensive experience with rapid prototyping projects
+                  that utilize single-board computers like the Raspberry Pi.
+                </p>
+                <p>
                   <em>
                     I am currently looking for software engineering roles in New
                     Orleans, or roles that mesh well with working remotely.
                   </em>{' '}
-                  I work primarily with MERN stacks (Mongo, Express, React,
-                  Node), and also have a lot of experience with rapid
-                  prototyping projects that utilize single-board computers like
-                  the Raspberry Pi.
+                  I'm open to a purely front-end role, but my sweet spot is
+                  working with a mix of hardware and software. I really enjoy
+                  projects that find new ways to engage users outside of a
+                  screen.
                 </p>
               </div>
               <div className="contact">
