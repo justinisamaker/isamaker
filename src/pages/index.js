@@ -5,6 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Layout from '../components/layout/Layout'
 import SEO from '../components/seo'
+import HomeIntro from '../components/homeintro/HomeIntro'
 import '../components/home.scss'
 
 class BlogIndex extends React.Component {
@@ -30,38 +31,44 @@ class BlogIndex extends React.Component {
           ]}
         />
 
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          let image = node.frontmatter.featuredImage.childImageSharp.fluid.src
-          return (
-            <AniLink
-              cover
-              bg="url(/stardust2.png) repeat"
-              direction="left"
-              key={node.fields.slug}
-              to={node.fields.slug}
-              className="project"
-            >
-              <div className="project-title">
-                <h2>{title}</h2>
-              </div>
+        <HomeIntro />
 
-              <div className="project-info">
-                <h3>{title}</h3>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.teaser }}
-                />
-              </div>
+        <div className="home-posts">
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            let image = node.frontmatter.featuredImage.childImageSharp.fluid.src
+            return (
+              <AniLink
+                cover
+                bg="url(/stardust2.png) repeat"
+                direction="left"
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="project"
+              >
+                <div className="project-title">
+                  <h2>{title}</h2>
+                </div>
 
-              <div className="project-overlay"></div>
+                <div className="project-info">
+                  <h3>{title}</h3>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.teaser,
+                    }}
+                  />
+                </div>
 
-              <div
-                className="project-image"
-                style={{ backgroundImage: `url(${image})` }}
-              ></div>
-            </AniLink>
-          )
-        })}
+                <div className="project-overlay"></div>
+
+                <div
+                  className="project-image"
+                  style={{ backgroundImage: `url(${image})` }}
+                ></div>
+              </AniLink>
+            )
+          })}
+        </div>
       </Layout>
     )
   }

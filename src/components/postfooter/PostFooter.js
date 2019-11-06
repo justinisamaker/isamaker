@@ -21,16 +21,18 @@ class PostFooter extends React.Component {
         <ul>
           <li className="next-post">
             {this.props.next ? (
-                <AniLink
-                  cover
-                  bg="url(/stardust2.png) repeat"
-                  direction="left"
-                  to={this.props.next.fields.slug}
-                  rel="prev"
-                >
-                  ← {this.props.next.frontmatter.title}
-                </AniLink>
-            ) : '' }
+              <AniLink
+                cover
+                bg="url(/stardust2.png) repeat"
+                direction="left"
+                to={this.props.next.fields.slug}
+                rel="prev"
+              >
+                ← {this.props.next.frontmatter.title}
+              </AniLink>
+            ) : (
+              ''
+            )}
           </li>
           <li className="previous-post">
             {this.props.previous ? (
@@ -43,7 +45,9 @@ class PostFooter extends React.Component {
               >
                 {this.props.previous.frontmatter.title} →
               </AniLink>
-            ) : ''}
+            ) : (
+              ''
+            )}
           </li>
         </ul>
       </footer>
