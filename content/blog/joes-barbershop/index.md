@@ -1,6 +1,6 @@
 ---
 title:  "Joe's Barbershop"
-date: "2015-05-31T00:00:00-0500"
+date: "2015-03-31T00:00:00-0500"
 teaser: "A built-from-scratch Wordpress site to show off the best barbershop in the Midwest"
 featuredImage: joes-thumbnail.jpg
 externalLink: http://joesbarbershopchicago.com
