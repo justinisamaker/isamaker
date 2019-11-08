@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Image from 'gatsby-image'
 
