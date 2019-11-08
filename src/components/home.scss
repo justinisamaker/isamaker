@@ -72,10 +72,12 @@
 
 .project-image{
   z-index:10;
-
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  
   img{
     width:100%;
-
   }
 }
 

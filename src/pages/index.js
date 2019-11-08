@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
         <div className="home-posts">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
-            let image = node.frontmatter.featuredImage.childImageSharp.fluid
+            let image = node.frontmatter.featuredImage.childImageSharp.fixed.src
             return (
               <AniLink
                 cover
@@ -61,11 +61,10 @@ class BlogIndex extends React.Component {
 
                 <div className="project-overlay"></div>
 
-                <Image
-                  fluid={image}
-                  alt={title}
-                  className="project-image"
-                />
+                  <div
+                    className="project-image"
+                    style={{ backgroundImage: `url(${image})` }}
+                  ></div>
               </AniLink>
             )
           })}
@@ -97,8 +96,8 @@ export const pageQuery = graphql`
             teaser
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 400) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 400) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
