@@ -1,6 +1,6 @@
 ---
 title:  "Headless Raspberry Pi Startup with Ansible"
-date: "2017-03-14T00:00:00-0500"
+date: "2017-04-12T00:00:00-0500"
 teaser: "Get your Pi up and ready to go with a few short commands and an Ansible playbook."
 featuredImage: ansible-pi.jpg
 ---
