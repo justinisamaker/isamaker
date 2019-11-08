@@ -1,6 +1,6 @@
 ---
 title:  "Gigity.tv"
-date: "2015-04-22T00:00:00-0500"
+date: "2012-01-28T00:00:00-0500"
 teaser: "The project that got me serious about web development. Check out how I helped a small startup completely redesign their brand and website."
 featuredImage: gigity-thumbnail.jpg
 externalLink: http://gigity.tv
