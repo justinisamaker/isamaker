@@ -1,7 +1,7 @@
 ---
 title:  "Lost Arts"
 date: "2017-03-14T00:00:00-0500"
-teaser: "Helping spread the word about my favorite makerspace in Chicago."
+teaser: "Creating an easily changed WordPress site for the my favorite constantly-evolving makerspace."
 featuredImage: lost-arts-logo.png
 externalLink: http://lostarts.co
 ---

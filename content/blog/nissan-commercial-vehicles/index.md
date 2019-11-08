@@ -1,7 +1,7 @@
 ---
 title:  "Nissan Commercial Vehicles"
 date: "2015-04-21T00:00:00-0500"
-teaser: "My main account at Critical Mass. Take a look at how I worked with my team to build new features and overhaul the old stuff for the commercial branch of Nissan."
+teaser: "Browse through some of the projects I worked on for Nissan Commercial Vehicles with my front-end team."
 featuredImage: ncv-thumbnail-2.jpg
 externalLink: http://nissancommercialvehicles.com
 ---

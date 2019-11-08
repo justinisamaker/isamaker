@@ -1,7 +1,7 @@
 ---
 title:  "Solar Calculator"
 date: "2017-06-30T00:00:00-0500"
-teaser: "Changing the way we think about solar potential."
+teaser: "Using a Raspberry Pi to let homeowners see exactly how much solar potential their house has."
 featuredImage: solar.jpg
 ---
 

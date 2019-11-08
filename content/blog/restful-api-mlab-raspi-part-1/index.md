@@ -1,7 +1,7 @@
 ---
 title:  "Creating a RESTful API on a Raspberry Pi with mLab and MongoDB - Part 1"
 date: "2017-02-02T00:00:00-0500"
-teaser: "Learn how to use mLab's cloud-hosted MongoDB instances to make data-heavy development on the Pi a lot easier."
+teaser: "Learn how to use mLab's cloud-hosted MongoDB instances to make MERN development on the Pi a lot easier."
 featuredImage: mlab-logo.png
 ---
 

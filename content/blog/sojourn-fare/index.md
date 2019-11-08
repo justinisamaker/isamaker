@@ -1,12 +1,12 @@
 ---
 title:  "Sojourn Fare"
 date: "2018-04-02T00:00:00-0500"
-teaser: "Using technology to create the perfect environment for growing mushrooms."
+teaser: "Growing gourmet mushrooms can be hard, but it gets easier when you have a data-heavy AgTech startup doing it for you."
 featuredImage: sojourn.jpg
 externalLink: http://sojournfare.com
 ---
 
-Sojourn Fare was an ag tech startup that I co-founded in 2016. The company produced IoT environmental control units that helped make mushroom cultivation approachable and reliable. While growing most mushrooms isn’t very hard on its own, there are lots of things that can go wrong during the growth cycle that will completely ruin a crop. Those bumps in the road are why Roman Titus, my co-founder, came to seek out my help. Roman had a batch of Pleurotus ostreatus, more commonly known as oyster mushrooms, growing in his apartment. He lost an entire container of oysters to trichoderma mold after leaving on some last-minute travel for a few days, and had a hunch that technology may be able to help prevent that from happening again. We set out to create a more user-friendly system that did a lot of the hard work of mushroom cultivation for you.
+Sojourn Fare was an AgTech startup that I co-founded in 2016. The company produced IoT environmental control units that helped make mushroom cultivation approachable and reliable. While growing most mushrooms isn’t very hard on its own, there are lots of things that can go wrong during the growth cycle that will completely ruin a crop. Those bumps in the road are why Roman Titus, my co-founder, came to seek out my help. Roman had a batch of Pleurotus ostreatus, more commonly known as oyster mushrooms, growing in his apartment. He lost an entire container of oysters to trichoderma mold after leaving on some last-minute travel for a few days, and had a hunch that technology may be able to help prevent that from happening again. We set out to create a more user-friendly system that did a lot of the hard work of mushroom cultivation for you.
 
 <div class="image-container large-image">
   <img src="./sojourn-2.jpg" alt="Pleurotus ostreatus growing in one of the first prototype units" />

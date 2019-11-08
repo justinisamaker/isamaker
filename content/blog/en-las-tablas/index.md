@@ -1,7 +1,7 @@
 ---
 title:  "En Las Tablas"
 date: "2015-04-22T00:00:00-0500"
-teaser: "A pro-bono project for an incredible non-profit built during the Nerdery's Overnight Website Challenge."
+teaser: "An easy-to-use custom WordPress site built for a community arts and outreach organization in Chicago."
 featuredImage: elt-thumbnail.jpg
 externalLink: http://enlastablas.org
 ---
