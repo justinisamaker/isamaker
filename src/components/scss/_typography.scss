@@ -31,45 +31,20 @@ html, body{
 
 a{
   text-decoration: none;
-  color:$darkBlue;
-  transition:color 0.2s ease-in-out;
-
-  &:hover{
-    color:$blue;
-    transition:color 0.2s ease-in-out;
-  }
 }
 
 /* ==========================================================================
    LINKS
    ========================================================================== */
 
-#post-content a{
-  font-family:inherit;
-  font-style:inherit;
-  font-size:inherit;
-  text-decoration:none;
-  font-weight:inherit;
-  position:relative;
-  color:$teal;
-  transition:color, 0.1s, linear;
+.post-content p, .home-content p{
+  a{
+    color:$teal;
+    transition:color, 0.2s, ease-in-out;
 
-  &:hover{
-    color:$blue;
-    transition:color, 0.1s, linear;
-
-    &:before{
-      content:'';
-      display:inline-block;
-      width:100px;
-      height:20px;
-      background:$lightGray;
-      position:absolute;
-      z-index:-1;
-      top: -26%;
-      left: -3%;
-      width: 105%;
-      height: 125%;
+    &:hover{
+      color:$darkBlue;
+      transition:color, 0.2s, ease-in-out;
     }
   }
 }
