@@ -1,28 +1,18 @@
 ---
 title:  "Lawton Academy"
 date: "2017-01-29T00:00:00-0500"
-teaser: "A website redesign for my high school alma mater, a school that focuses on bringing out the best in its students."
+teaser: "A website redesign for a Lawton Academy, a school that focuses on bringing out the best in its students."
 featuredImage: lawton-academy-logo.png
 externalLink: http://lawtonacademy.com
 ---
 
-I was lucky enough to attend an excellent school during my high school years. Now that I'm well past that part of my life, I wanted to give back to the school and help in their success. The school, the Lawton Academy of Arts & Sciences, is a small non-religious private school in Lawton, Oklahoma. The school was founded by my grandmother in 1999 - she had just retired from a fifty-year career in various roles with public schools in Lawton. Her career culminated with her serving as the superintendent of a magnet school. People from the community came to her when she retired and asked her to start a non-religiously-affiliated private school. At the time the only options for private education in Lawton were Catholic or hardline Southern Baptist schools, and the town was losing people like surgeons and engineers that didn't want to put their kids into that kind of education. She started the school with my granddad, and now my grandparents and my parents all teach there.
+Education is hard–there’s no two ways about it. I’ve only dipped my toe into the education arena through a few very limited engagements, but it’s been enough to reinforce the diehard gratefulness that I have for folks who were called to that line of work. My support of educators is also rooted in the fact that I come from a family chock full of them–I’ve got six in my immediate family! The majority of them teach at a small K-12 school in Southwest Oklahoma called the Lawton Academy of Arts and Sciences.
+
+The school was founded by my grandmother in 1999–she had just retired from a fifty-year career in various roles with public schools in Lawton. Her career culminated with her serving as the superintendent of a magnet school. People from the community came to her when she retired and asked her to start a non-religiously-affiliated private school. At the time the only options for private education in Lawton were Catholic or hardline Southern Baptist schools, and the town was losing people like surgeons and engineers that didn’t want to put their kids into that kind of education.
+
+The website for the school had been through a lot of iterations before I took it over. A few of the teachers were trying to rely on that famous Okie stubbornness to make a site generator stretch significantly farther than it was supposed to, but ultimately they were working harder than they needed to. I rebuilt the website for them with a custom WordPress theme and Advanced Custom Fields integration that made it easy for anyone at the school to make sure that the information was up-to-date and relevant.
 
 <div class="image-container large-image">
-  <img src="./lawton-academy-1.jpg" alt="Tinkering to inspire students to explore" />
-  <a class="image-caption">Tinkering to inspire students to explore</a>
+  <img src="./lawton-academy-capture.png" alt="The Lawton Academy Website" />
+  <a href="http://lawtonacademy.com/" target="_new" class="image-caption">The Lawton Academy Website</a>
 </div>
-
-<div class="paragraph-with-picture">
-  <p>The school focuses on bringing out the best in students, and I know that I wouldn't be the same today if I hadn't been exposed to the school during my formative years. My grandmother (along with other non-related instructors) pushed me to explore the arts, which ultimately led to me attend the School of the Art Institute of Chicago. <a href="http://www.lawtonacademyrobotics.com/" target="_new">Our robotics team</a> exposed me to basic circuitry and engineering and sparked a passion for tinkering. It was an amazing experience, and I knew that I wanted to help the organization succeed and impact more childrens' lives.</p>
-
-  <div class="image-container small-image">
-    <img src="./lawton-academy-2.jpg" alt="The robot from the 2016 robotics season" />
-    <a class="image-caption">The robot from the 2016 robotics season</a>
-  </div>
-
-</div>
-
-It's easy to make associations and assumptions about private schooling, but I feel like this was a very different experience than "traditional" private schools. I entered the school when my family completed our circle of moving for the Army - we moved back to Fort Sill, the town where I was born, after bouncing all over the Bible Belt. I was just entering my 9th grade year, and the school was just starting their high school program. Because the school was still developing, attending the school was very much like being an early customer for a startup - if we wanted something from the school, we helped them create it. That attitude definitely molded my character and philosophy of taking on large projects that still need shaping.
-
-I went back to show the website to a friend to explain my high school experience, and I was greeted by a site that was obviously built using a site generator. There was a ton of information, but it lacked the polish that the rest of the school exuded. I proposed that I take a crack at a website redesign, and we ended up rebuilding the whole system on Wordpress. There's an abundance of information to communicate on the site, which made the project especially interesting. <a href="http://lawtonacademy.com" target="_new">Take a look at the site</a> to learn more about the school's mission and history, keep up to date on events, and see what the application process looks like.  
