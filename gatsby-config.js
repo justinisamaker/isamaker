@@ -81,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-61160746-1`,
       },
     },
     {
@@ -155,7 +155,6 @@ module.exports = {
         icon: `content/assets/jts-icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -170,14 +169,5 @@ module.exports = {
       }
     },
     `gatsby-plugin-transition-link`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-61160746-1",
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
   ],
 }
