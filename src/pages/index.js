@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Image from 'gatsby-image'
 
 import Layout from '../components/layout/Layout'
 import SEO from '../components/seo'
@@ -36,7 +37,7 @@ class BlogIndex extends React.Component {
         <div className="home-posts">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
-            let image = node.frontmatter.featuredImage.childImageSharp.fluid.src
+            let image = node.frontmatter.featuredImage.childImageSharp.fluid
             return (
               <AniLink
                 cover
@@ -61,10 +62,11 @@ class BlogIndex extends React.Component {
 
                 <div className="project-overlay"></div>
 
-                <div
+                <Image
+                  fluid={image}
+                  alt={title}
                   className="project-image"
-                  style={{ backgroundImage: `url(${image})` }}
-                ></div>
+                />
               </AniLink>
             )
           })}
@@ -96,7 +98,7 @@ export const pageQuery = graphql`
             teaser
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 400) {
                   ...GatsbyImageSharpFluid
                 }
               }
