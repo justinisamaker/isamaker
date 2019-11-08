@@ -29,25 +29,21 @@ html, body{
   color:darkslategray;
 }
 
-a{
-  text-decoration: none;
-}
-
 /* ==========================================================================
    LINKS
    ========================================================================== */
 
-.post-content p, .home-content p{
-  a{
-    color:$teal;
-    transition:color, 0.2s, ease-in-out;
+ a{
+   text-decoration: none;
+   color:$teal;
+   transition:color, 0.2s, ease-in-out;
 
-    &:hover{
-      color:$darkBlue;
-      transition:color, 0.2s, ease-in-out;
-    }
-  }
-}
+   &:hover{
+     color:$darkBlue;
+     transition:color, 0.2s, ease-in-out;
+   }
+ }
+
 
 /*
    INLINE CODE
