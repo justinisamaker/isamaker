@@ -1,4 +1,3 @@
-import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import React from 'react'
 import './Sidebar.scss'
@@ -12,6 +11,7 @@ const Sidebar = () => {
         bg="url(/stardust2.png) repeat"
         direction="right"
         className="logo-link"
+        to={ "/" }
       >
         <Logo className="jts-logo" />
         <h1 className="header-title">

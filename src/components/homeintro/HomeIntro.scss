@@ -99,10 +99,14 @@
     grid-template-areas:
       "intro intro contact";
 
-      .select-clients{
-        grid-area:contact;
-        margin-top:10em;
-      }
+    .select-clients{
+      grid-area:contact;
+      margin-top:10em;
+    }
+
+    h5{
+      margin-top:0.6em;
+    }
   }
 }
 

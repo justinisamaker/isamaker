@@ -1,7 +1,7 @@
 ---
 title:  "Arduino-Controlled Projection Mapping"
 date: "2015-02-18T00:00:00-0500"
-teaser: "Turning a room into a psychedelic hallucination with Resolume, Magic Music Visualizer, and a custom-built cupcake controller running on Arduino."
+teaser: "Turning a room into a projection-mapped beauty with Resolume, Magic Music Visualizer, and a custom-built cupcake controller running on Arduino."
 featuredImage: ftloc-teaser.jpg
 ---
 
