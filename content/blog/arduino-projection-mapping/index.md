@@ -19,23 +19,23 @@ My interest stayed dormant for a few years until I recieved a Tweet out of the b
 
 </div>
 
-We agreed to get in touch if we bumped into an interesting project that seemed like it would be a good fit, and after a few misses due to scheduling conflicts we got the perfect opportunity. I was contacted by an old friend, <a href="http://andreagonzalez.info" target="_blank">Andrea Gonazalez</a>, who was looking for a piece for a fundraiser. Andrea is an excellent artist who went to <a href="http://www.saic.edu/index.html" target="_blank">SAIC</a> with me - she recently decided to leave the design industry to pursue her passion for French pastries. The fundraiser was an event for the <a href="http://frenchpastryschool.com" target="_blank">French Pastry School</a> called "<a href="http://www.fortheloveofchocolatefoundation.org/" target="_blank">For the Love of Chocolate</a>." The theme for the event was the '60s, and she needed a projection to transform a room into a psychedelic landscape. The room that we were in came complete with a sitar band called <a href="http://www.thegitacult.com/" target="_blank">"The Gita Cult,"</a> and a seemingly endless supply of delicious treats. This seemed like a great opportunity for a collaborative project with the ever-funky George, so we started brainstorming.
+We agreed to get in touch if we bumped into an interesting project that seemed like it would be a good fit, and after a few misses due to scheduling conflicts we got the perfect opportunity. I was contacted by an old friend, <a href="http://andreagonzalez.info" target="_blank">Andrea Gonazalez</a>, who was looking for a piece for a fundraiser. Andrea is an excellent artist who went to <a href="http://www.saic.edu/index.html" target="_blank">SAIC</a> with me–she recently decided to leave the design industry to pursue her passion for French pastries. The fundraiser was an event for the <a href="http://frenchpastryschool.com" target="_blank">French Pastry School</a> called "<a href="http://www.fortheloveofchocolatefoundation.org/" target="_blank">For the Love of Chocolate</a>." The theme for the event was the '60s, and she needed a projection to transform a room into a psychedelic landscape. The room that we were in came complete with a sitar band called <a href="http://www.thegitacult.com/" target="_blank">"The Gita Cult,"</a> and a seemingly endless supply of delicious treats. This seemed like a great opportunity for a collaborative project with the ever-funky George, so we started brainstorming.
 
 ### Enough about the backstory.<br/>Here's how we made it.
 
 Like I mentioned earlier, George has the projection mapping thing down pat, so we just needed to learn how to get an Arduino to talk to our mapping software. The first step on my side of the project was getting familar with the software.
 
 #### Resolume
-We used a program called <a href="http://resolume.com/" target="_blank">Resolume</a> to handle the projection mapping and Arduino-controlled effects. Resolume is a pretty amazing piece of software - even just playing around with the examples is impressive.
+We used a program called <a href="http://resolume.com/" target="_blank">Resolume</a> to handle the projection mapping and Arduino-controlled effects. Resolume is a pretty amazing piece of software–even just playing around with the examples is impressive.
 
 <div class="image-container large-image">
   <img src="./resolume-screenshot.jpg" alt="A screenshot of the Resolume Dashboard" />
   <a class="image-caption">A screenshot of the Resolume Dashboard</a>
 </div>
 
-As you can see in the image above, the Resolume dashboard can be a little overwhleming at first. The general idea is that you work in compositions that group clips together for a certain arrangement. Clips are housed in the upper right quarter of the dashboard, and are queued to start playing on the first beat of the music. There are some clips that have audio baked into the file - the visuals of these files react to tempo changes from the attached audio. You set the tempo for a composition the same way that you set it for DJing&ndash;by clicking a tap button along with the count of the music.
+As you can see in the image above, the Resolume dashboard can be a little overwhleming at first. The general idea is that you work in compositions that group clips together for a certain arrangement. Clips are housed in the upper right quarter of the dashboard, and are queued to start playing on the first beat of the music. There are some clips that have audio baked into the file–the visuals of these files react to tempo changes from the attached audio. You set the tempo for a composition the same way that you set it for DJing&ndash;by clicking a tap button along with the count of the music.
 
-Resolume can also add a layer of visual effects to each clip, or to the entire compostion. The effects interface is what we were interested in using it for. The visualizations that we were generating wouldn't actually be generated in Resolume - we just needed an additional layer of control and the mapping. But before we get to mapping, let's talk about how we generated the visuals to map.
+Resolume can also add a layer of visual effects to each clip, or to the entire compostion. The effects interface is what we were interested in using it for. The visualizations that we were generating wouldn't actually be generated in Resolume–we just needed an additional layer of control and the mapping. But before we get to mapping, let's talk about how we generated the visuals to map.
 
 #### Magic Music Visuals
 <div class="paragraph-with-picture">
@@ -55,7 +55,7 @@ George has tons of these patches that he uses in his projects. To facilitate the
   <a class="image-caption">Adding patches to the playlist in MMV</a>
 </div>
 
-In addition to creating some trippy visuals with George's graphic assets, MMV also handled the sound-reactive bits for us. Modules in the patch are routed through a sound-reactive module before hitting the endpoint - that module responds to a specific frequency range from a mic input, or to the overall volume. Once it sees a spike in whatever you're listening to, you can tell it what it should do to your visuals.
+In addition to creating some trippy visuals with George's graphic assets, MMV also handled the sound-reactive bits for us. Modules in the patch are routed through a sound-reactive module before hitting the endpoint–that module responds to a specific frequency range from a mic input, or to the overall volume. Once it sees a spike in whatever you're listening to, you can tell it what it should do to your visuals.
 
 You'll notice that all of the visuals in MMV for our projects have two screens on them. This will be made more clear once we get to the mapping portion, but the short answer is that this was a technique that was employed to get more video with less firepower.
 
@@ -74,7 +74,7 @@ Once downloaded, any additional modules can be added to a project by going to th
 Once we had MMV broadcasting to a Syphon server, the next step was to get Resolume listening to that server. Lucky for us, Resolume already had Syphon support built in seamlessly. To enable this feature, we went to the preferences menu, selected video, and then checked the box to enable Syphon input and output. Once that box was checked, we were then able to select "Syphon" from the sources menu, and drag it over to be treated as a clip.
 
 #### Resolume Effects
-Getting the visuals together and ported into Resolume was the easy part - now we had to come up with something to do with them. The original plan was to send MIDI signals from the Arduino into Resolume, and then use Resolume MIDI mapping to control the desired effects. George was able to reproduce some simple keymapping from real world objects using the <a href="http://makeymakey.com/" target="_blank">Makey Makey</a>, but what we really wanted was to be able to control the effects with a potentiometer, which is just a ten-dollar word for a slider or a volume knob. After putzing around with sending MIDI signals from the Arduino with irregular success, I decided to switch over to the <a href="http://opensoundcontrol.org/introduction-osc" target="_blank">Open Sound Control</a> (OSC) protocol. OSC ended up being a lot less complicated, and I think that it's more extensible in the long run.
+Getting the visuals together and ported into Resolume was the easy part–now we had to come up with something to do with them. The original plan was to send MIDI signals from the Arduino into Resolume, and then use Resolume MIDI mapping to control the desired effects. George was able to reproduce some simple keymapping from real world objects using the <a href="http://makeymakey.com/" target="_blank">Makey Makey</a>, but what we really wanted was to be able to control the effects with a potentiometer, which is just a ten-dollar word for a slider or a volume knob. After putzing around with sending MIDI signals from the Arduino with irregular success, I decided to switch over to the <a href="http://opensoundcontrol.org/introduction-osc" target="_blank">Open Sound Control</a> (OSC) protocol. OSC ended up being a lot less complicated, and I think that it's more extensible in the long run.
 
 #### Cupcake Time!
 <div class="paragraph-with-picture">
@@ -99,7 +99,7 @@ Getting the visuals together and ported into Resolume was the easy part - now we
 
 </div>
 
-With all of my potentiometers ready to go, it was time to start hooking components up to the Arduino. I decided to use an Arduino Micro that that I had sitting around to free up some space inside the box - all that we needed was six analog inputs, and the Micro had more than enough juice to power the project. The potentiometers were connected to the power source and ground from the Arduino, and then each of their outputs was sent to the first six analog inputs on the micro. All we needed the Arduino to do was to read the values from the potentiometers, and then broadcast that value as a string.
+With all of my potentiometers ready to go, it was time to start hooking components up to the Arduino. I decided to use an Arduino Micro that that I had sitting around to free up some space inside the box–all that we needed was six analog inputs, and the Micro had more than enough juice to power the project. The potentiometers were connected to the power source and ground from the Arduino, and then each of their outputs was sent to the first six analog inputs on the micro. All we needed the Arduino to do was to read the values from the potentiometers, and then broadcast that value as a string.
 
 #### Arduino Code
 The code portion for the Arduino is extremely straightforward. The Arduino reads a few values and then sends them on through the serial port. The only gotcha is that the code needs to send everything as one string, so inside the loop we're only using `Serial.print` until the last line where we use `Serial.println` to trigger a new line.
@@ -181,7 +181,7 @@ void draw() {
 
 // Set up a void for a serial event that is triggered at a newline
 void serialEvent(Serial myPort) {
-  // get the message until a newline - that's now our string
+  // get the message until a newline–that's now our string
   String inString = myPort.readStringUntil('\n');
 
   // if we've got a valid message
@@ -273,10 +273,10 @@ Since I was just projecting on a simple set of shapes in the corner of the room,
   <iframe width="100%" height="480" src="https://www.youtube.com/embed/yXI83otRqE4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-The mapping window is tucked away up in the displays menu under the "advanced" option. Once that dialog opens, it shows you the raw output of your Resolume composition. I mentioned previously that George's MMV pieces showed two different pieces right next to each other as the same source - this is where that comes in handy. In the mapping window in Resolume, you can crop out a specific part of the source, and then assign that to a slice. This allowed us to load twice as many videos even though Resolume only treated it as one source. After the sources were cut out, the only thing left to do was click and drag to start mapping the sources to the projection target.
+The mapping window is tucked away up in the displays menu under the "advanced" option. Once that dialog opens, it shows you the raw output of your Resolume composition. I mentioned previously that George's MMV pieces showed two different pieces right next to each other as the same source–this is where that comes in handy. In the mapping window in Resolume, you can crop out a specific part of the source, and then assign that to a slice. This allowed us to load twice as many videos even though Resolume only treated it as one source. After the sources were cut out, the only thing left to do was click and drag to start mapping the sources to the projection target.
 
 ### Displaying the Project
-George and I knew going in that this would be a fancy event, but I think we both underestimated the party that we were in for. The event was a veritable who's who of the culinary arts in Chicago. I'd be lying if I said I wasn't geeking out when Rick Bayless grated chocolate onto a dessert that he handed me - I definitely fanboy'ed out and mumbled something about also being from Oklahoma.
+George and I knew going in that this would be a fancy event, but I think we both underestimated the party that we were in for. The event was a veritable who's who of the culinary arts in Chicago. I'd be lying if I said I wasn't geeking out when Rick Bayless grated chocolate onto a dessert that he handed me–I definitely fanboy'ed out and mumbled something about also being from Oklahoma.
 
 All in all, the event went extremely well. There were hundreds of people who moved through the room during the night, and we even got a special shout-out in the text messages that the event organizers were sending out during the party. People seemed to really enjoy playing with the cupcakes, which definitely caused people to spend more time in the room.
 

@@ -54,7 +54,7 @@ The field test went well, and I was able to verify that the voltage being sent t
   <a class="image-caption">Testing the unit on the front of my house</a>
 </div>
 
-The second day of testing was a little more complicated, but it helped us prove a valuable data point. We had a nice sunny morning that quickly turned into an overcast drizzly day. I was a little bummed as I didn’t think we would get good readings, but the data proved me wrong. It doesn’t matter to the panel if it’s actually clear and sunny outside - it’s looking for infrared light, and there’s still plenty of that on a cloudy day. We were able to show that the panel continued production throughout the rain, which helped us push the point about solar viability in the state that the power company was located in.
+The second day of testing was a little more complicated, but it helped us prove a valuable data point. We had a nice sunny morning that quickly turned into an overcast drizzly day. I was a little bummed as I didn’t think we would get good readings, but the data proved me wrong. It doesn’t matter to the panel if it’s actually clear and sunny outside–it’s looking for infrared light, and there’s still plenty of that on a cloudy day. We were able to show that the panel continued production throughout the rain, which helped us push the point about solar viability in the state that the power company was located in.
 
 <div class="image-container large-image">
   <img src="./house-test-2.jpg" alt="Testing the unit in the drizzle" />

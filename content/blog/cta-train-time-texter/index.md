@@ -5,7 +5,7 @@ teaser: "Creating a button to text me how long I have to get to my L stop before
 featuredImage: cta.jpg
 ---
 
-I've got around a ten minute walk to my closest train station every morning. Depending on how late I'm running and if I'm hustling or not, that time can swing from eight to twelve minutes. It seems like every time I try to do the eight-minute run, I always end up getting to the station right as my train is pulling away. To help better predict how much time I have to catch a train, I made a button that can figure out when the next train arrives. Once it gets the time, it sends me a text to my phone - that way I can hit the button on my way out the door and not worry about it until I make it to the bottom of my stairs.
+I've got around a ten minute walk to my closest train station every morning. Depending on how late I'm running and if I'm hustling or not, that time can swing from eight to twelve minutes. It seems like every time I try to do the eight-minute run, I always end up getting to the station right as my train is pulling away. To help better predict how much time I have to catch a train, I made a button that can figure out when the next train arrives. Once it gets the time, it sends me a text to my phone–that way I can hit the button on my way out the door and not worry about it until I make it to the bottom of my stairs.
 
 <div class="image-container large-image">
   <img src="./cta.jpg" alt="Photo by Clark Maxwell" />
@@ -17,12 +17,12 @@ Making a button that can talk to the Internet sounds kind of involved, but it's 
 #### Set Up Your Edison
 Full disclosure&mdash;I'm working on a Mac, so these instructions will skew that way. To get started, you should have a <a href="https://communities.intel.com/docs/DOC-23193" target="_blank">freshly-flashed Edison</a>. After you board is flashed, you can try to find the IP address and enter all the additional commands, or you can just "npm install bloop" on the machine that you're trying to SSH in from. <a href="http://rexstjohn.com/introducing-bloop-cli-commands-for-working-with-intel-edison/" target="_blank">Bloop is a tool</a> from <a href="http://rexstjohn.com/" target="_blank">Rex St. John</a>, and it's an absolute lifesaver when you're working with the Edison. Instead of running "screen /dev/cu.usbserial-XXXXX 115200 -L", all you have to do is run "bloop c" it will connect to the Edison it finds on your network. Once you're in, run "configure_edison --setup" to get your wi-fi and user creds defined.
 
-While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_blank">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card - you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_blank">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
+While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_blank">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card–you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_blank">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
 
 #### Hook Up Your Button
 
 <div class="paragraph-with-picture">
-  <p>If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button - the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.</p>
+  <p>If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button–the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.</p>
 
   <div class="image-container small-image">
     <img src="./sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" />
@@ -90,7 +90,7 @@ function getArrTime(){
 		'&mapid=' +
 		// and the station id
 		loganId +
-		// only return two results - we just need the next train in a certain direction
+		// only return two results–we just need the next train in a certain direction
 		'&max=2', function(error, response, body){
 			// parse the XML response
 			parser.parseString(body, function(err, result){
@@ -107,7 +107,7 @@ function getArrTime(){
 				var ampm = H < 12 ? "AM" : "PM";
 				var formattedArrTime = h + arrTime.substr(2, 3) + ' ' + ampm;
 
-				// pull the response for the direction of train that we're looking for. The Blue Line runs North towards O'Hare, or South towards Forest Park - I want Forest Park for my morning commute
+				// pull the response for the direction of train that we're looking for. The Blue Line runs North towards O'Hare, or South towards Forest Park–I want Forest Park for my morning commute
 				if((json['ctatt'].eta[i].destNm) == 'Forest Park'){
 					// give us a nice message to text
 					messageBody =
@@ -158,7 +158,7 @@ init();
 ```
 
 #### Run Your Code
-In the terminal window that has your Bloop session open, type 'node traintracker.js' in the root of your project folder. This should start the JS running. Check your terminal to see if the Edison gave back the MRAA version - if it did, you're all good to go. Go ahead and press the button, and then wait for your text.
+In the terminal window that has your Bloop session open, type 'node traintracker.js' in the root of your project folder. This should start the JS running. Check your terminal to see if the Edison gave back the MRAA version–if it did, you're all good to go. Go ahead and press the button, and then wait for your text.
 
 If you don't receive a text, take a look at the output in the terminal. The code will return an error telling you what you're missing. Make sure that you replaced all the CTA and Twilio API keys, as well as the Twilio numbers.
 

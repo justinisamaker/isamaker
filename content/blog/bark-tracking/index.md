@@ -12,9 +12,9 @@ A couple of years ago my landlord informed me that the shop that I was living be
   <a href="http://www.aefischer.com/pets/" target="_new" class="image-caption">A Photo of King by Ashley Fischer for the Warm Noses Project</a>
 </div>
 
-A few weeks later, we ended up with King, the big lug of a dog that you see pictured above. He's a pit mutt that we managed to pick up from the <a href="http://www.cityofchicago.org/city/en/depts/cacc.html" target="_new">Chicago Animal Care and Control</a> kennel 48 hours before he was set to be euthanized. The decision, albeit rushed, was a good one in the long run - King is a great dog.
+A few weeks later, we ended up with King, the big lug of a dog that you see pictured above. He's a pit mutt that we managed to pick up from the <a href="http://www.cityofchicago.org/city/en/depts/cacc.html" target="_new">Chicago Animal Care and Control</a> kennel 48 hours before he was set to be euthanized. The decision, albeit rushed, was a good one in the long run–King is a great dog.
 
-With that said, one of King's favorite pastimes is barking in the house while we're out. Squirrels, cars, people in the hallway - if it makes a noise while we're out, King is on it. I decided to run a few experiments by tracking his barking to see what we could do to quiet him down a bit.
+With that said, one of King's favorite pastimes is barking in the house while we're out. Squirrels, cars, people in the hallway–if it makes a noise while we're out, King is on it. I decided to run a few experiments by tracking his barking to see what we could do to quiet him down a bit.
 
 I ended up using the <a href="http://www.intel.com/content/www/us/en/do-it-yourself/edison.html" target="_new">Intel Edison</a> to log King's barking patterns. My thinking was that the Edison would use a small mic to listen to the room for loud noises, and then when it registered a noise, it would send that data to a feed on <a href="https://data.sparkfun.com/" target="_new">data.sparkfun.com</a>.
 
@@ -25,7 +25,7 @@ The Edison is really good at a lot of things, and one of the things that excites
 #### Setting Up the Edison
 Full disclosure&mdash;I'm working on a Mac, so these instructions will skew that way. To get started, you should have a <a href="https://communities.intel.com/docs/DOC-23193" target="_new">freshly-flashed Edison</a>. After you board is flashed, you can try to find the IP address and enter all the additional commands, or you can just "npm install bloop" on the machine that you're trying to SSH in from. <a href="http://rexstjohn.com/introducing-bloop-cli-commands-for-working-with-intel-edison/" target="_new">Bloop is a tool</a> from <a href="http://rexstjohn.com/" target="_new">Rex St. John</a>, and it's an absolute lifesaver when you're working with the Edison. Instead of running "screen /dev/cu.usbserial-XXXXX 115200 -L", all you have to do is run "bloop c" it will connect to the Edison it finds on your network. Once you're in, run "configure_edison --setup" to get your wi-fi and user creds defined.
 
-While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_new">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card - you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_new">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
+While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_new">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card–you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_new">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
 
 #### Hook Up Your Sensor
 <div class="paragraph-with-picture left">
@@ -52,14 +52,14 @@ Power down your Edison, and then attach the Grove Connector Shield. Once you hav
   <a class="image-caption">My Edison with the mic hooked up to A0</a>
 </div>
 
-It should be noted that while the Grove Starter Kit is a nice to have, you don't really need to worry about not having it. Get a sensor, solder some wires on, and hook it up straight to the pins on the Arduino - it's all the same thing.
+It should be noted that while the Grove Starter Kit is a nice to have, you don't really need to worry about not having it. Get a sensor, solder some wires on, and hook it up straight to the pins on the Arduino–it's all the same thing.
 
 #### Create a Feed on data.sparkfun.com
-Before we start writing the code, we're going to need some place to put all this tasty, tasty data that we'll be collecting. I decided to use <a href="https://data.sparkfun.com/" target="_new">data.sparkfun</a> for its ease of use. You'll need to create a feed - <a href="https://data.sparkfun.com/streams/make" target="_new">follow this link to do that</a>.
+Before we start writing the code, we're going to need some place to put all this tasty, tasty data that we'll be collecting. I decided to use <a href="https://data.sparkfun.com/" target="_new">data.sparkfun</a> for its ease of use. You'll need to create a feed–<a href="https://data.sparkfun.com/streams/make" target="_new">follow this link to do that</a>.
 
 While you're setting up your feed, you need to decide what it is that you'll be tracking. You can add these items in the fields section. For my build, all I need to track is the level of noise. Sparkfun automatically adds a timestamp for you, which is the other piece of data that I'd like to collect.
 
-Once you've created your feed, keep the window open so you have easy access to your public and private keys - you'll need those in the next step.
+Once you've created your feed, keep the window open so you have easy access to your public and private keys–you'll need those in the next step.
 
 #### Set Up Your Dev Environment
 Now that your sensor is plugged in, power your Edison is powered on again. Once it's booted up, run "bloop c" from Terminal on your computer to SSH into your Edison. Once you're in, make a new directory for your project in your root folder. Grab the contents of my <a href="https://github.com/justinisamaker/arduino/blob/master/barkTracker/package.json" target="_new">package.json file</a>, and then run "npm install" from the root directory. This will install Forever, Moment, Moment Timezone, and Request, as well as any dependencies that they have.
@@ -92,14 +92,14 @@ function checkSoundLevels(){
   // read the value to start off
   var soundValue = soundSensor.read();
 
-  // Log the value to see where you need to set the threshold - uncomment this line to debug
+  // Log the value to see where you need to set the threshold–uncomment this line to debug
   //console.log(soundValue);
 
   // If the sound is higher than the threshold, make the request
   if(soundValue >= threshold){
     // Set the current time with my timezone, format the date and time
-    var currentTime = moment().tz("America/Chicago").format('HH:mm:ss - MM/DD/YYYY');
-    // Use the request library to hit the Sparkfun URL - make sure you replace the applicable parts with your data
+    var currentTime = moment().tz("America/Chicago").format('HH:mm:ss–MM/DD/YYYY');
+    // Use the request library to hit the Sparkfun URL–make sure you replace the applicable parts with your data
     request('http://data.sparkfun.com/input/[INSERT PUBLIC KEY]?private_key=[INSERT PRIVATE KEY]&soundlevel=' + soundValue + '&localtime=' + currentTime, function(error, response, body){
       console.log(response.statusCode);
 
@@ -125,7 +125,7 @@ function checkSoundLevels(){
 When you look at the code, you'll need to find the spot that says "[YOUR PRIVATE KEY]" and "[YOUR STREAM ID]" and replace those with the info that you got from Sparkfun when you set up your stream.
 
 #### Run Your Code
-Once everything is loaded and configured, navigate to the root folder of your project, and run "node whateverYouNamedYourFile.js". If you left the console.logs in, you'll see the data start to come through the terminal. Adjust your threshold to your liking, then make a loud noise and go check to see that it updated on Sparkfun. If you see the data on Sparkfun's website after a refresh, you got it right. If you don't see the new data coming in, double check that you entered your stream's ID, private key, and data fields correctly. Also take a look at the console output after your run node on your file - the logs there may help you debug your code.
+Once everything is loaded and configured, navigate to the root folder of your project, and run "node whateverYouNamedYourFile.js". If you left the console.logs in, you'll see the data start to come through the terminal. Adjust your threshold to your liking, then make a loud noise and go check to see that it updated on Sparkfun. If you see the data on Sparkfun's website after a refresh, you got it right. If you don't see the new data coming in, double check that you entered your stream's ID, private key, and data fields correctly. Also take a look at the console output after your run node on your file–the logs there may help you debug your code.
 
 #### Experiment Results
 I was constantly refreshing the data.sparkfun feed the first few days that I was running the tracker. Much to my dismay, the tracker was logging a noise almost every five minutes. I came home ready to go apologize to my neighbors for my unruly dog and swear to them that he doesn't do this while we're home. The third day that I ran it, I left it running while I took King out for a walk when I got home. When I came back in, the tracker had been registering the entire time that we were gone. After a little threshold adjusting, I was able to hone in on the right values and get a good read. Turns out that he was only barking a few times a day, and a little white noise in the apartment reduced that even more.
