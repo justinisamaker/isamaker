@@ -42,6 +42,11 @@
     margin-bottom:em(10px);
     }
   }
+
+  video{
+    width:100%;
+    outline:none !important;
+  }
 }
 
  /*
@@ -52,7 +57,7 @@
   grid-template-columns:1fr;
   grid-auto-rows:auto;
 
-  img{
+  img, video{
     width:100%;
   }
 }
@@ -60,7 +65,7 @@
 .image-container{
   width:100%;
 
-  img{
+  img, video{
     border:1px solid $black;
   }
 
@@ -107,7 +112,7 @@
       grid-area:text;
     }
 
-    img{
+    img, video{
       width:100%;
       grid-area:image;
     }

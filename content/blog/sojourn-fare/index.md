@@ -1,6 +1,6 @@
 ---
 title:  "Sojourn Fare"
-date: "2018-04-02T00:00:00-0500"
+date: "2018-09-02T00:00:00-0500"
 teaser: "Growing gourmet mushrooms can be hard, but it gets easier when you have a data-heavy AgTech startup doing it for you."
 featuredImage: sojourn.jpg
 externalLink: http://sojournfare.com

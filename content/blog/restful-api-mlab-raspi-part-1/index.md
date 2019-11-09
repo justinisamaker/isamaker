@@ -5,7 +5,7 @@ teaser: "Learn how to use mLab's cloud-hosted MongoDB instances to make MERN dev
 featuredImage: mlab-logo.png
 ---
 
-The Raspberry Pi tends to end up in a lot of projects that benefit from collecting, storing, and analyzing data - when you have a full computer that costs 35 bucks, it makes sense to attach to everything that you want to learn from! There are plenty of options on what to do with the data you collect, but my absolute favorite so far has been working with MongoDB through mLab. This post will walk you through setting up a basic server in Node that will let you push data from you Pi up to mLab's cloud-hosted MongoDB instances.
+The Raspberry Pi tends to end up in a lot of projects that benefit from collecting, storing, and analyzing data - when you have a full computer that costs 35 bucks, it makes sense to attach it to everything! There are plenty of options on what to do with the data you collect, but my absolute favorite so far has been working with MongoDB through mLab. This post will walk you through setting up a basic server in Node that will let you push data from you Pi up to mLab's cloud-hosted MongoDB instances.
 
 <div class="image-container large-image">
   <img src="./mlab-logo.png" alt="mLab Logo" />
