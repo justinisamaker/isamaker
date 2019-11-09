@@ -169,5 +169,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-offline`
   ],
 }
