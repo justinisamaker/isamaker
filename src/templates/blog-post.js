@@ -16,7 +16,21 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.teaser}
+          keywords={[
+            'creative technologist',
+            'Chicago',
+            'New Orleans',
+            'react',
+            'front-end',
+            'front end',
+            'javascript',
+            'raspberry pi',
+            'arduino',
+          ]}
+        />
         <PostHeader
           title={post.frontmatter.title}
           date={post.frontmatter.date}
@@ -48,11 +62,11 @@ export const pageQuery = graphql`
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         externalLink
+        teaser
       }
       body
     }

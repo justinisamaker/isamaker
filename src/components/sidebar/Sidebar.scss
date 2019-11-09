@@ -19,6 +19,7 @@
 }
 
 .jts-logo{
+  display:none;
   background:$white;
   transition:background, 0.2s, ease-in-out;
   width:100%;
@@ -37,6 +38,7 @@
   line-height:1.2em;
   text-transform:uppercase;
   color:$white;
+  margin:0;
 }
 
 .sidebar-info{
@@ -87,6 +89,14 @@
   }
 
   .logo-link{
+    display:block;
+  }
+
+  .header-title{
+    margin-top:0.8em;
+  }
+
+  .jts-logo{
     display:block;
   }
 

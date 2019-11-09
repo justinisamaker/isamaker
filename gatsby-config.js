@@ -147,10 +147,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Justin is a Maker`,
-        short_name: `JustinisaMaker`,
+        short_name: `Justinisamaker`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `##375d81`,
         display: `minimal-ui`,
         icon: `content/assets/jts-icon.png`,
       },
