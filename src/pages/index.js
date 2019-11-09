@@ -61,11 +61,7 @@ class BlogIndex extends React.Component {
 
                 <div className="project-overlay"></div>
 
-                  <Image
-                    fluid={image}
-                    alt={title}
-                    className="project-image"
-                  />
+                <Image fluid={image} alt={title} className="project-image" />
               </AniLink>
             )
           })}
