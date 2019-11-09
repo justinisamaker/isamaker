@@ -150,7 +150,7 @@ module.exports = {
         short_name: `Justinisamaker`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `##375d81`,
+        theme_color: `#375d81`,
         display: `minimal-ui`,
         icon: `content/assets/jts-icon.png`,
       },
