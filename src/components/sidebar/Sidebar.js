@@ -11,7 +11,7 @@ const Sidebar = () => {
         bg="url(/stardust2.png) repeat"
         direction="right"
         className="logo-link"
-        to={ "/" }
+        to={'/'}
       >
         <Logo className="jts-logo" />
         <h1 className="header-title">

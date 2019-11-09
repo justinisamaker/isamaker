@@ -16,7 +16,7 @@ class PostHeader extends React.Component {
             target="_new"
           >
             View the live version <br className="external-link-break" />
-            of this project <span class="right-arrow">&raquo;</span>
+            of this project <span className="right-arrow">&raquo;</span>
           </a>
         ) : null}
       </header>
