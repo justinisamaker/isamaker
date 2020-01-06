@@ -26,6 +26,7 @@ function HomeIntro() {
                   also have extensive experience with rapid prototyping projects
                   that utilize single-board computers like the Raspberry Pi.
                 </p>
+                {/*
                 <p>
                   <em>
                     I am currently looking for software engineering roles in New
@@ -36,6 +37,7 @@ function HomeIntro() {
                   projects that find new ways to engage users outside of a
                   screen.
                 </p>
+                */}
               </div>
               <div className="contact">
                 <h5>Want to know more?</h5>
