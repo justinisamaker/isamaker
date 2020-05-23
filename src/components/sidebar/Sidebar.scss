@@ -1,117 +1,118 @@
 @import '../main.scss';
 
-.main-sidebar{
-  background:url('../../images/stardust.png') repeat;
-  padding:1em 1.5em 1.5em 1.5em;
-  border-bottom:1px solid $black;
-  height:auto;
-  display:grid;
-  grid-template-columns:1fr 40% 25%;
-  grid-template-areas:
-    "logo . info";
+.main-sidebar {
+  background: url('../../images/stardust.png') repeat;
+  padding: 1em 1.5em 1.5em 1.5em;
+  border-bottom: 1px solid $black;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 40% 25%;
+  grid-template-areas: 'logo . info';
 }
 
-.logo-link{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-column-gap:1em;
+.logo-link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
   grid-area: logo;
 }
 
-.jts-logo{
-  display:none;
-  background:$white;
-  transition:background, 0.2s, ease-in-out;
-  width:100%;
-  height:auto;
-  margin-bottom:-0.5em;
+.jts-logo {
+  display: none;
+  background: $white;
+  transition: background, 0.2s, ease-in-out;
+  width: 100%;
+  height: auto;
+  margin-bottom: -0.5em;
 
-  &:hover{
-    background:$lightBlue;
-    transition:background, 0.2s, ease-in-out;
+  &:hover {
+    background: $lightBlue;
+    transition: background, 0.2s, ease-in-out;
   }
 }
 
-.header-title{
+.header-title {
   @include raleway;
-  font-size:1.1em;
-  line-height:1.2em;
-  text-transform:uppercase;
-  color:$white;
-  margin:0;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: $white;
+  margin: 0;
 }
 
-.sidebar-info{
-  grid-area:info;
+.sidebar-info {
+  grid-area: info;
 }
 
-.social, .specialities{
-  h2, a{
+.social,
+.specialities {
+  h2,
+  a {
     @include raleway;
-    font-size:0.6em;
-    line-height:2.5em;
-    color:$white;
-    text-transform:uppercase;
-    margin:0;
-    padding:0;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    color: $white;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+    padding: 0;
   }
 }
 
-.social{
-  text-align:right;
+.social {
+  text-align: right;
 
-  a{
-    display:block;
+  a {
+    display: block;
 
-    &:hover{
-      color:$lightBlue !important;
+    &:hover {
+      color: $lightBlue !important;
     }
   }
 }
 
-.specialities{
-  display:none;
-  border-bottom:1px solid $white;
-  padding-bottom:0.7em;
-  margin-bottom:0.7em;
+.specialities {
+  display: none;
+  border-bottom: 1px solid $white;
+  padding-bottom: 0.7em;
+  margin-bottom: 1.4em;
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-width : $medium) {
-  .main-sidebar{
-    padding:1em;
-    border-bottom:0;
-    border-right:1px solid $black;
-    position:fixed;
-    width:10%;
-    height:96%;
-    display:block;
+@media only screen and (min-width: $medium) {
+  .main-sidebar {
+    padding: 1em;
+    border-bottom: 0;
+    border-right: 1px solid $black;
+    position: fixed;
+    width: 10%;
+    height: 96%;
+    display: block;
   }
 
-  .logo-link{
-    display:block;
+  .logo-link {
+    display: block;
   }
 
-  .header-title{
-    margin-top:0.8em;
+  .header-title {
+    margin-top: 0.8em;
   }
 
-  .jts-logo{
-    display:block;
+  .jts-logo {
+    display: block;
   }
 
-  .sidebar-info{
-    width:75%;
-    position:absolute;
-    bottom:2em;
-    left:1em;
+  .sidebar-info {
+    width: 75%;
+    position: absolute;
+    bottom: 2em;
+    left: 1em;
   }
 
-  .specialities{
-    display:block;
+  .specialities {
+    display: block;
   }
 
-  .social{
-    text-align:left;
+  .social {
+    text-align: left;
   }
 }
