@@ -49,16 +49,9 @@ function HomeIntro() {
                   >
                     LinkedIn
                   </a>
-                  ,{' '}
+                  {' '}and{' '}
                   <a href="https://github.com/justinisamaker" target="_new">
                     GitHub
-                  </a>
-                  , and{' '}
-                  <a
-                    href="https://www.instagram.com/justinisamaker/"
-                    target="_new"
-                  >
-                    Instagram
                   </a>
                   . You can also reach me via e-mail at{' '}
                   <a href="mailto:justin@isamaker.com">justin@isamaker.com</a>.
