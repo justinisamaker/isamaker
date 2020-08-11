@@ -35,9 +35,6 @@ const Sidebar = () => {
           <a href="https://github.com/justinisamaker" target="_new">
             GitHub
           </a>
-          <a href="http://instagram.com/justinisamaker" target="_new">
-            Instagram
-          </a>
         </div>
       </section>
     </aside>
