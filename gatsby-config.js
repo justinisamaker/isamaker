@@ -157,16 +157,19 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            subsets: [`latin`],
-            variants: [`400`, `700`]
-          }
-        ]
-      }
+        fonts: {
+          google: [
+            {
+              family: "Raleway",
+              variants: ["400", "700"],
+              subsets: ['latin']
+
+            },
+          ],
+        },
+      },
     },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-offline`
