@@ -19,13 +19,17 @@ function HomeIntro() {
               <div className="intro">
                 <h2>Hello, I'm Justin.</h2>
                 <p>
-                  I'm a maker who loves to explore new technologies. My work
+                  I'm a maker and educator who loves to explore new technologies. My work
                   blends front-end development, fine arts, and years of
                   involvement in the maker and startup communities. I work
                   primarily with MERN stacks (Mongo, Express, React, Node), and
-                  also have extensive experience with rapid prototyping projects
-                  that utilize single-board computers like the Raspberry Pi.
+                  also have extensive experience with rapid prototyping projects.
                 </p>
+
+                <p>In 2020 I left a full-time role as a software engineer to pursue
+                  an opportunity to run a makerspace program at a middle school. The class I teach
+                  is called "Workshop," and exists somewhere between a design thinking program,
+                  a shop class, and a coding bootcamp.</p>
                 {/*
                 <p>
                   <em>
