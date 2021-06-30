@@ -5,55 +5,55 @@
 
 @import '../main.scss';
 
-.post-content-header{
-  grid-area:post-header;
-  border-bottom:1px solid $darkBlue;
-  margin-bottom:2em;
-  padding-bottom:1em;
-  padding-top:1em;
-  display:grid;
-  grid-template-columns:1fr;
+.post-content-header {
+  grid-area: post-header;
+  border-bottom: 1px solid $darkBlue;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
 
-  h1{
+  h1 {
     @include raleway;
     color: $darkBlue;
-    font-size:2em;
-    line-height:1.3em;
-    margin-bottom:-0.1em;
+    font-size: 2em;
+    line-height: 1.3em;
+    margin-bottom: -0.1em;
   }
 
-  .meta{
-    font-size:0.8em;
-    color:$teal;
+  .meta {
+    font-size: 0.8em;
+    color: $teal;
   }
 }
 
-.post-external-link{
+.post-external-link {
   @include raleway;
-  display:block;
-  margin-top:0.9em;
-  padding-top:1em;
-  font-size:1em;
-  line-height:1.3em;
-  border-top:1px solid $darkBlue;
+  display: block;
+  margin-top: 0.9em;
+  padding-top: 1em;
+  font-size: 1em;
+  line-height: 1.3em;
+  border-top: 1px solid $darkBlue;
 }
 
-.external-link-break{
-  display:none;
+.external-link-break {
+  display: none;
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-width : $medium) {
-  .post-content-header{
-    grid-template-columns:65% 1fr;
+@media only screen and (min-width: $medium) {
+  .post-content-header {
+    grid-template-columns: 65% 1fr;
   }
 
-  .post-external-link{
-    text-align:right;
-    border-top:0;
+  .post-external-link {
+    text-align: right;
+    border-top: 0;
   }
 
-  .external-link-break{
-    display:block;
+  .external-link-break {
+    display: block;
   }
 }
