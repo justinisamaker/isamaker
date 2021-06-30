@@ -2,123 +2,133 @@
    BLOG-POST.SCSS
    - Styles for blog posts
    ========================================================================== */
- @import "./main.scss";
+@import './main.scss';
 
-.post-content-container{
+.post-content-container {
   grid-area: content;
 
-  h3{
+  h3 {
     @include raleway;
-    font-size:1.4em;
-    line-height:1.5em;
-    color:$darkBlue;
-    text-align:center;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    color: $darkBlue;
+    text-align: center;
     margin: 2em auto 1em auto;
-    font-weight:700;
+    font-weight: 700;
   }
 
-  h4{
-    border-bottom:1px solid $blue;
-    padding-bottom:0.3em;
-    margin:2.5em auto 0.6em auto;
+  h4 {
+    border-bottom: 1px solid $blue;
+    padding-bottom: 0.3em;
+    margin: 2.5em auto 0.6em auto;
     @include raleway;
-    font-size:1.3em;
-    line-height:1.3em;
-    color:$darkBlue;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    color: $darkBlue;
   }
 
-  p, ol{
+  p,
+  ol {
     @include body-copy;
-    font-size:1em;
-    line-height:1.5em;
-    margin-bottom:1.5em;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
   }
 
-  ol{
-    padding-left:em(15px);
+  ol {
+    padding-left: em(15px);
     list-style-type: decimal;
 
-    li{
-    margin-bottom:em(10px);
+    li {
+      margin-bottom: em(10px);
     }
   }
 
-  video{
-    width:100%;
-    outline:none !important;
+  video {
+    width: 100%;
+    outline: none !important;
   }
 }
 
- /*
+/*
    IMAGES
    ========================================================================== */
-.paragraph-with-picture{
-  display:grid;
-  grid-template-columns:1fr;
-  grid-auto-rows:auto;
+.paragraph-with-picture {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
 
-  img, video{
-    width:100%;
+  img,
+  video {
+    width: 100%;
   }
 }
 
-.image-container{
-  width:100%;
+.image-container {
+  width: 100%;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
 
-  img, video{
-    border:1px solid $black;
+  img,
+  video {
+    border: 1px solid $black;
   }
 
-  &.half-image{
-    display:grid;
-    grid-auto-rows:auto;
-    grid-column-gap:2em;
-    grid-template-columns:1fr 1fr;
+  &.half-image {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-column-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &.large-image {
+    margin-top: 2em;
   }
 }
 
-.image-caption{
-  display:block;
-  width:100%;
+.image-caption {
+  display: block;
+  width: 100%;
   @include no-link-styles;
-  text-align:right;
-  color:$teal;
-  font-size:0.7em !important;
-  margin-top:0.8em;
-  transition:color 0.1s ease-in-out;
+  text-align: right;
+  color: $teal;
+  font-size: 0.7em !important;
+  margin-top: 0.8em;
+  transition: color 0.1s ease-in-out;
 
-  &:hover{
-    color:$darkBlue;
-    transition:color 0.1s ease-in-out;
+  &:hover {
+    color: $darkBlue;
+    transition: color 0.1s ease-in-out;
 
-    &:before{
-      display:none !important;
+    &:before {
+      display: none !important;
     }
   }
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-width : $medium) {
-  .paragraph-with-picture{
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:98% 1fr;
-    grid-gap:3em;
+@media only screen and (min-width: $medium) {
+  .paragraph-with-picture {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 98% 1fr;
+    grid-gap: 3em;
 
     grid-template-areas:
-      "text image"
-      "text caption";
+      'text image'
+      'text caption';
 
-    p{
-      grid-area:text;
+    p {
+      grid-area: text;
     }
 
-    img, video{
-      width:100%;
-      grid-area:image;
+    img,
+    video {
+      width: 100%;
+      grid-area: image;
     }
 
-    .image-caption{
-      grid-area:caption;
+    .image-caption {
+      grid-area: caption;
     }
   }
 }
