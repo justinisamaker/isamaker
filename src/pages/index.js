@@ -22,12 +22,20 @@ class BlogIndex extends React.Component {
             'creative technologist',
             'Chicago',
             'New Orleans',
+            'Louisiana',
+            'Folsom',
             'react',
             'front-end',
             'front end',
+            'gatsby',
+            'js',
             'javascript',
             'raspberry pi',
             'arduino',
+            'makerspace',
+            'cnc',
+            'laser cutter',
+            '3D printing',
           ]}
         />
 
