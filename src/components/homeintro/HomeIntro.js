@@ -19,17 +19,18 @@ function HomeIntro() {
               <div className="intro">
                 <h2>Hello, I'm Justin.</h2>
                 <p>
-                  I'm a maker and educator who loves to explore new technologies. My work
-                  blends front-end development, fine arts, and years of
-                  involvement in the maker and startup communities. I work
-                  primarily with MERN stacks (Mongo, Express, React, Node), and
-                  also have extensive experience with rapid prototyping projects.
+                  I'm a developer and maker who loves to explore new
+                  technologies. My work blends front-end development, fine arts,
+                  and years of involvement in the maker and startup communities.
+                  I work primarily with React and Gatsby, and also have
+                  extensive experience with rapid prototyping projects.
                 </p>
 
-                <p>In 2020 I left a full-time role as a software engineer to pursue
-                  an opportunity to run a makerspace program at a middle school. The class I teach
-                  is called "Workshop," and exists somewhere between a design thinking program,
-                  a shop class, and a coding bootcamp.</p>
+                <p>
+                  I'm currently working at Intralox helping a small team of
+                  engineers to improve and modernize all of their web properties
+                  using Gatsby, Tailwind, and Kontent.
+                </p>
                 {/*
                 <p>
                   <em>
@@ -52,8 +53,8 @@ function HomeIntro() {
                     target="_new"
                   >
                     LinkedIn
-                  </a>
-                  {' '}and{' '}
+                  </a>{' '}
+                  and{' '}
                   <a href="https://github.com/justinisamaker" target="_new">
                     GitHub
                   </a>
