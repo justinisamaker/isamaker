@@ -19,17 +19,27 @@ function HomeIntro() {
               <div className="intro">
                 <h2>Hello, I'm Justin.</h2>
                 <p>
-                  I'm a developer and maker who loves to explore new
-                  technologies. My work blends front-end development, fine arts,
-                  and years of involvement in the maker and startup communities.
-                  I work primarily with React and Gatsby, and also have
-                  extensive experience with rapid prototyping projects.
+                  I’m a developer and maker who loves exploring new technologies
+                  and bringing creative solutions to life. With a background
+                  that spans front-end development, fine arts, and deep
+                  involvement in the maker and startup communities, I enjoy
+                  working on projects at the intersection of design and
+                  technology.
                 </p>
 
                 <p>
-                  I'm currently working at Intralox helping a small team of
-                  engineers to improve and modernize all of their web properties
-                  using Gatsby, Tailwind, and Kontent.
+                  I specialize in building modern web applications, primarily
+                  using JavaScript and React, while also bringing experience in
+                  PHP, Python, and rapid prototyping to the table. My work
+                  blends technical expertise with a creative mindset.
+                </p>
+
+                <p>
+                  Currently, I’m at Intralox, where I’m part of a small, agile
+                  team dedicated to modernizing and optimizing our websites
+                  across multiple brands. We use tools like Gatsby, Tailwind,
+                  and Kontent to create fast, seamless digital experiences that
+                  serve both end users and internal content editors.
                 </p>
                 {/*
                 <p>
