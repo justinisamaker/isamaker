@@ -2,6 +2,7 @@ import { SITE_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import cn from 'classnames';
+import Link from 'next/link';
 import AnimatedLink from '@/app/_components/animated-link';
 
 import './globals.css';
@@ -67,14 +68,16 @@ export default function RootLayout({
               boxShadow: '8px 0 24px -10px rgba(0, 0, 0, 0.5)',
             }}
           >
-            <img
-              src="/assets/jts-logo.svg"
-              alt="Justin is a Maker Logo"
-              className="hidden md:block w-full bg-white"
-            />
-            <h2 className="uppercase text-xl leading-tight mt-2">
-              <a href="/">Justin Smith</a>
-            </h2>
+            <Link href="/" className="group block">
+              <img
+                src="/assets/jts-logo.svg"
+                alt="Justin is a Maker Logo"
+                className="hidden md:block w-full bg-white transition-colors duration-200 group-hover:bg-blue-100"
+              />
+              <h2 className="uppercase text-xl leading-tight mt-2 text-white group-hover:text-blue-300 transition-colors duration-200">
+                Justin Smith
+              </h2>
+            </Link>
             <div className="hidden md:block absolute md:bottom-4 text-sm md:pr-4">
               <h6>
                 Front-end software, open hardware, and human-centered design.
