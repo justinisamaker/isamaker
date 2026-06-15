@@ -2,15 +2,15 @@ import Image from 'next/image';
 
 export function Intro() {
   return (
-    <section className="mt-2 mb-12">
+    <section className="mt-14 md:mt-2 mb-12">
       <div className="prose w-full max-w-none">
-        <div className="hidden md:block md:float-right md:w-64 md:ml-8 md:mb-8">
+        <div className="hidden md:block md:float-right md:w-64 md:ml-10">
           <Image
             src="/assets/headshot.jpg"
             alt="A photo of Justin Smith"
             width={400}
             height={400}
-            className="w-full h-auto"
+            className="w-full h-auto shadow-xl"
           />
         </div>
         <h2 className="font-bold leading-tight text-4xl text-slate-dark mb-2 mt-0">

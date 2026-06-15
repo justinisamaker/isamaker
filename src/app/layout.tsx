@@ -61,8 +61,11 @@ export default function RootLayout({
       <body className={cn(raleway.className)}>
         <div className="min-h-screen flex">
           <aside
-            className="w-full md:w-40 md:h-screen bg-repeat p-4 fixed top-0 left-0 z-10 text-white"
-            style={{ backgroundImage: "url('/assets/stardust.png')" }}
+            className="w-full md:w-40 md:h-screen bg-repeat py-4 px-8 md:p-4 fixed top-0 left-0 z-10 text-white shadow-lg"
+            style={{
+              backgroundImage: "url('/assets/stardust.png')",
+              boxShadow: '8px 0 24px -10px rgba(0, 0, 0, 0.5)',
+            }}
           >
             <img
               src="/assets/jts-logo.svg"
