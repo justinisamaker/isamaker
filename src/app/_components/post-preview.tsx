@@ -11,8 +11,8 @@ type Props = {
 export function PostPreview({ title, coverImage, excerpt, slug }: Props) {
   return (
     <Link href={`/posts/${slug}`} className="group block">
-      <article className="flex h-[26rem] flex-col overflow-hidden border border-slate-900 bg-white shadow-sm transition-all duration-200 ease-in-out">
-        <div className="p-4 bg-white border-b border-slate-900">
+      <article className="flex h-[18rem] flex-col overflow-hidden border border-slate-900 bg-white shadow-sm transition-all duration-200 ease-in-out">
+        <div className="px-6 py-4 bg-white border-b border-slate-900">
           <h3 className="text-base font-semibold text-slate-900 leading-tight">
             {title}
           </h3>
@@ -31,9 +31,9 @@ export function PostPreview({ title, coverImage, excerpt, slug }: Props) {
 
           <div className="project-info absolute inset-x-0 top-full p-6 text-white transition-all duration-200 ease-in-out group-hover:top-0 z-20">
             <p className="text-sm leading-relaxed mb-4">{excerpt}</p>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold view-post hover:text-blue-300 transition-colors duration-150">
               View post
-              <span className="transition-all duration-200 group-hover:ml-1">&rArr;</span>
+              <span className="view-post-arrow transition-all duration-200 -ml-1">&rArr;</span>
             </span>
           </div>
         </div>

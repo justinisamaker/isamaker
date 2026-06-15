@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.view-post:hover .view-post-arrow {
+  margin-left: 0;
+}
