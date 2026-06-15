@@ -24,7 +24,6 @@ export function PostPreview({ title, coverImage, excerpt, slug }: Props) {
             title={title}
             src={coverImage}
             fill
-            link={false}
             className="object-cover"
           />
 
