@@ -92,7 +92,7 @@ export default function RootLayout({
               </AnimatedLink>
             </div>
           </aside>
-          <div className="flex-1 md:ml-48 py-8 px-8 md:px-16">{children}</div>
+          <div className="flex-1 md:ml-48 py-12 px-8 md:px-16">{children}</div>
         </div>
       </body>
     </html>
