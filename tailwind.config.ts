@@ -42,9 +42,7 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            p: {
-              // marginBottom: '0.1rem',
-            },
+            maxWidth: '74ch',
           },
         },
       },

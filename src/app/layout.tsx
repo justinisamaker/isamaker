@@ -62,7 +62,7 @@ export default function RootLayout({
       <body className={cn(raleway.className)}>
         <div className="min-h-screen flex">
           <aside
-            className="w-full md:w-40 md:h-screen bg-repeat py-4 px-8 md:p-4 fixed top-0 left-0 z-10 text-white shadow-lg"
+            className="w-full md:w-48 md:h-screen bg-repeat py-4 px-8 md:p-4 fixed top-0 left-0 z-10 text-white shadow-lg"
             style={{
               backgroundImage: "url('/assets/stardust.png')",
               boxShadow: '8px 0 24px -10px rgba(0, 0, 0, 0.5)',
@@ -92,7 +92,7 @@ export default function RootLayout({
               </AnimatedLink>
             </div>
           </aside>
-          <div className="flex-1 md:ml-40 py-8 px-8 md:px-16">{children}</div>
+          <div className="flex-1 md:ml-48 py-8 px-8 md:px-16">{children}</div>
         </div>
       </body>
     </html>
