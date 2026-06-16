@@ -80,8 +80,8 @@ export function Intro() {
             >
               GitHub
             </a>
-            . Please note that most of my GitHub contributions happen on private
-            repos linked to employers. You can also reach me via e-mail at{' '}
+            , although I'm mostly active on private corporate GitHub accounts.
+            You can also reach me via e-mail at{' '}
             <a
               href="mailto:justin@isamaker.com"
               className="text-blue-500 hover:text-blue-400"
