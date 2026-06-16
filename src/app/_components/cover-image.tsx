@@ -1,6 +1,6 @@
-import cn from "classnames";
-import Link from "next/link";
-import Image from "next/image";
+import cn from 'classnames';
+import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -16,32 +16,22 @@ const CoverImage = ({ title, src, slug, className, fill }: Props) => {
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn(
-        "shadow-sm",
+        'shadow-sm',
         {
-          "w-full h-auto": !fill,
-          "object-cover": fill,
+          'w-full h-auto': !fill,
+          'object-cover': fill,
         },
         className,
         {
-          "hover:shadow-lg transition-shadow duration-200": slug,
-        }
+          'hover:shadow-lg transition-shadow duration-200': slug,
+        },
       )}
       {...(fill
-        ? { fill: true, sizes: "100vw" }
+        ? { fill: true, sizes: '100vw' }
         : { width: 1300, height: 630 })}
     />
   );
-  return (
-    <div className="sm:mx-0">
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
-    </div>
-  );
+  return <div className="sm:mx-0">{image}</div>;
 };
 
 export default CoverImage;

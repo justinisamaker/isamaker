@@ -9,7 +9,7 @@ type Props = {
 
 export function PostFooter({ title, externalLink, nextPost, previousPost }: Props) {
   return (
-    <footer className="max-w-2xl mx-auto pb-16">
+    <footer className="max-w-2xl mx-auto">
       {externalLink && (
         <a
           href={externalLink}
