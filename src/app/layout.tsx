@@ -99,7 +99,13 @@ export default function RootLayout({
               </AnimatedLink>
             </div>
           </aside>
-          <div className="flex-1 md:ml-48 py-12 px-8 md:px-16">{children}</div>
+          <div className="flex-1 md:ml-48 pt-12 pb-4 px-8 md:px-16 flex flex-col">
+            <main className="flex-1">{children}</main>
+
+            <footer className="mt-12 text-right text-xs text-slate-500">
+              &copy; {new Date().getFullYear()} Justin Smith. All rights reserved.
+            </footer>
+          </div>
         </div>
       </body>
     </html>
