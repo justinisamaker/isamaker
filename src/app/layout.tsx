@@ -83,6 +83,10 @@ export default function RootLayout({
                 Front-end software, open hardware, and human-centered design.
               </h6>
               <hr className="my-4 border-white" />
+              <AnimatedLink href="/assets/justin-smith-resume.html/">
+                Resume
+              </AnimatedLink>
+              <br />
               <AnimatedLink href="https://www.linkedin.com/in/justinisamaker/">
                 LinkedIn
               </AnimatedLink>

@@ -28,8 +28,9 @@ export function Intro() {
         <p>
           I specialize in modern web apps, primarily using{' '}
           <strong>JavaScript, React, and strong design systems</strong>. I’m
-          equally comfortable developing design systems (and documentation), or jumping into PHP, Python, or proof-of-concept prototypes when
-          a project needs momentum. I like solving problems with both structure
+          equally comfortable developing design systems (and documentation), or
+          jumping into PHP, Python, or proof-of-concept prototypes when a
+          project needs momentum. I like solving problems with both structure
           and imagination on well-oiled teams working in an agile methodology.
         </p>
 
@@ -56,6 +57,13 @@ export function Intro() {
         <div className="md:w-1/2">
           <h5 className="font-semibold mb-2">Want to know more?</h5>
           <p>
+            <a
+              href="/assets/justin-smith-resume.html"
+              target="_new"
+              className="text-blue-500 hover:text-blue-400"
+            >
+              Check out my resume.
+            </a>{' '}
             You can find me on{' '}
             <a
               href="https://www.linkedin.com/in/justinisamaker/"
@@ -72,7 +80,8 @@ export function Intro() {
             >
               GitHub
             </a>
-            . Please note that most of my GitHub contributions happen on private repos linked to employers. You can also reach me via e-mail at{' '}
+            . Please note that most of my GitHub contributions happen on private
+            repos linked to employers. You can also reach me via e-mail at{' '}
             <a
               href="mailto:justin@isamaker.com"
               className="text-blue-500 hover:text-blue-400"
