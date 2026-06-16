@@ -78,11 +78,11 @@ export default function RootLayout({
                 Justin Smith
               </h2>
             </Link>
-            <div className="hidden md:block absolute md:bottom-4 text-sm md:pr-4">
-              <h6>
+            <div className="absolute right-10 bottom-auto top-3 md:top-auto md:right-auto md:bottom-4 text-sm md:pr-4">
+              <h6 className="hidden md:block">
                 Front-end software, open hardware, and human-centered design.
               </h6>
-              <hr className="my-4 border-white" />
+              <hr className="my-4 border-white hidden md:block " />
               <AnimatedLink href="/assets/justin-smith-resume.html/">
                 Resume
               </AnimatedLink>
@@ -91,7 +91,10 @@ export default function RootLayout({
                 LinkedIn
               </AnimatedLink>
               <br />
-              <AnimatedLink href="https://github.com/justinisamaker">
+              <AnimatedLink
+                href="https://github.com/justinisamaker"
+                className="hidden md:block"
+              >
                 GitHub
               </AnimatedLink>
             </div>
