@@ -13,10 +13,7 @@ ogImage:
 
 I've got around a ten minute walk to my closest train station every morning. Depending on how late I'm running and if I'm hustling or not, that time can swing from eight to twelve minutes. It seems like every time I try to do the eight-minute run, I always end up getting to the station right as my train is pulling away. To help better predict how much time I have to catch a train, I made a button that can figure out when the next train arrives. Once it gets the time, it sends me a text to my phone–that way I can hit the button on my way out the door and not worry about it until I make it to the bottom of my stairs.
 
-<div class="image-container large-image">
-  <img src="/assets/blog/cta-train-time-texter/cta.jpg" alt="Photo by Clark Maxwell" />
-  <a href="http://www.flickr.com/photos/clarkmaxwell/" target="_new" class="image-caption">Photo by Clark Maxwell</a>
-</div>
+<BlogImage src="/assets/blog/cta-train-time-texter/cta.jpg" alt="Photo by Clark Maxwell" caption="Photo by Clark Maxwell" size="large" captionHref="http://www.flickr.com/photos/clarkmaxwell/" />
 
 Making a button that can talk to the Internet sounds kind of involved, but it's actually pretty easy when you use a microcontroller like the Intel Edison. When the Edison hears a click from a button that's attached to it, it uses JavaScript to make a call to the Chicago Transit Authority's API, and then another call to Twilio to send me a text. Let's take a look at how to make it!
 
@@ -27,15 +24,13 @@ While all this is happening, you can start downloading the Edison Yocto Image fr
 
 #### Hook Up Your Button
 
-<div class="paragraph-with-picture">
-  <p>If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button–the bigger, the better.<br/><br/>If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.</p>
+<ParagraphWithPicture src="/assets/blog/cta-train-time-texter/sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" caption="Sparkfun's Big Red Button" captionHref="https://www.sparkfun.com/products/9181">
 
-  <div class="image-container small-image">
-    <img src="/assets/blog/cta-train-time-texter/sparkfun-big-red-button.jpg" alt="Sparkfun's Big Red Button" />
-    <a href="https://www.sparkfun.com/products/9181" target="_new" class="image-caption">Sparkfun's Big Red Button</a>
-  </div>
+If you read any of my other Edison posts, you know that I've been working with a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_blank">Grove Starter Kit</a> that I got from Intel and Instructables. I used the small pushbutton from the starter kit for this project, but you can use any button–the bigger, the better.
 
-</div>
+If you need help figuring out how to hook up the button, the Arduino website has a really <a href="http://arduino.cc/en/tutorial/button" target="_blank">great tutorial</a> to get you pointed in the right direction. Whatever button you end up using, all you need to do is hook it up so that it's outputting to a digital pin on the Edison. I used D2 for my program. Once that is connect, you can go ahead and power on your Edison.
+
+</ParagraphWithPicture>
 
 ### Code Time
 We're going to be using MRAA, Node.js, the Chicago Transit Authority's API, and Twilio to handle the communication for this project. MRAA is the C library that lets us talk to the Edison through JavaScript. It works with a lot of different flavors of Intel products, and has a similar syntax to "regular" Arduino code. We could write this code as a regular Arduino program, but this puppy can run Node, so why not?

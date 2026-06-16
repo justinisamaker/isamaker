@@ -13,10 +13,7 @@ ogImage:
 
 A couple of years ago my landlord informed me that the shop that I was living behind would be expanding in to my apartment. He wasn't sure of the exact timeline, but he was sure of the fact that we would need to move in the near future. This was the first apartment that my girlfriend and I rented together&mdash;and our first "real" Chicago apartment&mdash;you can imagine how bummed we were. To soften the blow, we decided that we would start looking for an apartment that would allow a dog.
 
-<div class="image-container large-image">
-  <img src="/assets/blog/bark-tracking/king-2.jpg" alt="A Photo of King by Ashley Fischer for the Warm Noses Project" />
-  <a href="http://www.aefischer.com/pets/" target="_new" class="image-caption">A Photo of King by Ashley Fischer for the Warm Noses Project</a>
-</div>
+<BlogImage src="/assets/blog/bark-tracking/king-2.jpg" alt="A Photo of King by Ashley Fischer for the Warm Noses Project" caption="A Photo of King by Ashley Fischer for the Warm Noses Project" size="large" captionHref="http://www.aefischer.com/pets/" />
 
 A few weeks later, we ended up with King, the big lug of a dog that you see pictured above. He's a pit mutt that we managed to pick up from the <a href="http://www.cityofchicago.org/city/en/depts/cacc.html" target="_new">Chicago Animal Care and Control</a> kennel 48 hours before he was set to be euthanized. The decision, albeit rushed, was a good one in the long run–King is a great dog.
 
@@ -34,29 +31,19 @@ Full disclosure&mdash;I'm working on a Mac, so these instructions will skew that
 While all this is happening, you can start downloading the Edison Yocto Image from <a href="https://communities.intel.com/docs/DOC-23242" target="_new">this site</a>. You want the link that says, "Edison Yocto Complete Image." Once downloaded, you'll need to load the files onto a micro SD card–you can read up on Yocto and how to get those files onto the SD card <a href="https://software.intel.com/en-us/html5/documentation/getting-started-with-intel-xdk-iot-edition" target="_new">here</a>. After you load the files, power down your Edison, insert the SD card, and the power it back up. To test your install is working, bloop in to your Edison and type "node -v". If that returns the version of Node that you have installed you're good to go. If it says "Command not found," you're going to need to try loading Yocto onto the SD card again, because something went wrong.
 
 #### Hook Up Your Sensor
-<div class="paragraph-with-picture left">
-	<p>At this point in the build, you'll need to hook up whatever kind of sensor you're using. I was fortunate enough to receive a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_new">Grove Starter Kit</a> from Intel and Instructables, so I'll be talking about my experience with that. First pro-tip is that the connector shield is located on the back of the red anti-static foam, under the LCD screen. I may or may not have made it all the way to ordering a connector shield on Amazon before errantly knocking the starter kit case over and realizing that there was a shield already in the kit. It was early. I hadn't made coffee yet.</p>
+<ParagraphWithPicture src="/assets/blog/bark-tracking/grove-shield-packaging.jpg" alt="Finding the Grove connector shield" caption="Finding the Grove connector shield">
 
-  <div class="image-container small-image">
-    <img src="/assets/blog/bark-tracking/grove-shield-packaging.jpg" alt="Finding the Grove connector shield" />
-    <a class="image-caption">Finding the Grove connector shield</a>
-  </div>
+At this point in the build, you'll need to hook up whatever kind of sensor you're using. I was fortunate enough to receive a <a href="http://www.seeedstudio.com/depot/Grove-Starter-Kit-p-709.html" target="_new">Grove Starter Kit</a> from Intel and Instructables, so I'll be talking about my experience with that. First pro-tip is that the connector shield is located on the back of the red anti-static foam, under the LCD screen. I may or may not have made it all the way to ordering a connector shield on Amazon before errantly knocking the starter kit case over and realizing that there was a shield already in the kit. It was early. I hadn't made coffee yet.
 
-</div>
+</ParagraphWithPicture>
 
 <p>I 3D printed a case for my Edison using <a href="https://www.thingiverse.com/thing:457434" target="_new">a design from Thingiverse</a>. The case uses the screws for the struts to secure the lid, and has two slots for the shield pins to go through. I did have to drill an extra hole in the lid for the ISP pins, but other than that everything fits great.</p>
 
-<div class="image-container large-image">
-  <img src="/assets/blog/bark-tracking/edison-case.jpg" alt="3D Printed Intel Edison Case by Michael Jassowski" />
-  <a href="http://www.thingiverse.com/thing:457434" target="_new" class="image-caption">3D Printed Intel Edison Case by Michael Jassowski</a>
-</div>
+<BlogImage src="/assets/blog/bark-tracking/edison-case.jpg" alt="3D Printed Intel Edison Case by Michael Jassowski" caption="3D Printed Intel Edison Case by Michael Jassowski" size="large" captionHref="http://www.thingiverse.com/thing:457434" />
 
 Power down your Edison, and then attach the Grove Connector Shield. Once you have your shield attached, grab a connector and attach your sound sensor to the pin marked "A0" (analog 0). Once that is securely connected, go ahead and power up your Edison again.
 
-<div class="image-container large-image">
-  <img src="/assets/blog/bark-tracking/edison-with-sound-sensor.jpg" alt="My Edison with the mic hooked up to A0" />
-  <a class="image-caption">My Edison with the mic hooked up to A0</a>
-</div>
+<BlogImage src="/assets/blog/bark-tracking/edison-with-sound-sensor.jpg" alt="My Edison with the mic hooked up to A0" caption="My Edison with the mic hooked up to A0" size="large" />
 
 It should be noted that while the Grove Starter Kit is a nice to have, you don't really need to worry about not having it. Get a sensor, solder some wires on, and hook it up straight to the pins on the Arduino–it's all the same thing.
 

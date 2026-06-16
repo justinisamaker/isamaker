@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
-import markdownToHtml from "@/lib/markdownToHtml";
+import { getAllPosts, getPostBySlug, getAdjacentPosts } from "@/lib/api";
+import { renderMDX } from "@/lib/mdx";
 import Container from "@/app/_components/container";
-import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { PostFooter } from "@/app/_components/post-footer";
 import { SITE_NAME } from "@/lib/constants";
 
 export default async function Post(props: Params) {
@@ -15,7 +15,8 @@ export default async function Post(props: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
+  const content = await renderMDX(post.content || "");
+  const { nextPost, previousPost } = getAdjacentPosts(params.slug);
 
   return (
     <main>
@@ -26,7 +27,15 @@ export default async function Post(props: Params) {
             coverImage={post.coverImage}
             date={post.date}
           />
-          <PostBody content={content} />
+          <div className="max-w-2xl mx-auto text-lg leading-relaxed">
+            {content}
+          </div>
+          <PostFooter
+            title={post.title}
+            externalLink={post.externalLink}
+            nextPost={nextPost}
+            previousPost={previousPost}
+          />
         </article>
       </Container>
     </main>

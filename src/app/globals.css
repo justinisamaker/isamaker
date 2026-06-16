@@ -5,3 +5,16 @@
 .view-post:hover .view-post-arrow {
   margin-left: 0;
 }
+
+/* Code block styles */
+[data-rehype-pretty-code-figure] pre {
+  @apply overflow-x-auto rounded-lg p-4 text-sm leading-relaxed my-6;
+}
+
+[data-rehype-pretty-code-figure] code {
+  @apply grid;
+}
+
+[data-rehype-pretty-code-figure] [data-line] {
+  @apply px-4;
+}

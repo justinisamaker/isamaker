@@ -15,22 +15,17 @@ Retailers have their work cut out for them if they’re going to keep up with Am
 
 One of the pieces of their order fulfillment puzzle was a strategy called "Put to Light." Whenever an order comes into their warehouse it is split into three major phases–picking, sorting, and packing. During the picking phase, items are retrieved from the warehouse floor and sent along conveyors in a series of "pick waves." When a pick wave is ready to be sorted, it gets diverted to a put wall. That’s where I come in! A.C. Moore knew that they wanted put walls, but they weren’t happy with the existing options, and they wanted one that would integrate perfectly with their custom-built warehouse management system. They asked if I could build them nine custom put walls, and before I knew it, I was knee deep in warehouse logistics!
 
-<div class="image-container large-image">
-  <img src="/assets/blog/put-to-light/ptl-walls.jpg" alt="The completed put walls" />
-  <a class="image-caption">The completed put walls</a>
-</div>
+<BlogImage src="/assets/blog/put-to-light/ptl-walls.jpg" alt="The completed put walls" caption="The completed put walls" size="large" />
 
 At its core a put wall is a fairly simple technology. We needed to be able to light up a specific location under a bin on a shelf where an item would be placed, and then listen for a button click to confirm that the picker put the item in the bin. While simple from a hardware perspective, there is a lot that needs to happen on the software side of things, and it gets increasingly complex as you try to scale it. Whatever solution I came up with needed to be able to communicate to the endpoints of their warehouse management system (WMS). It also needed to be able to do it for roughly 500 bins at a time, with absolutely no errors, as fast as it possibly could.
 
-<div class="paragraph-with-picture">
-  <p>I decided to use a Raspberry Pi for the brain of each put wall. We needed to be able to perform some pretty complex handshakes with the WMS that would have been an absolute nightmare to attempt on an Arduino. While the Pi was better-suited for the networking side, it does not ship with the kind of inputs and outputs that we needed. Each put wall needed to listen to 52 buttons and run approximately six thousand WS2812B LEDs.<br/><br/>The first thing to account for were the buttons. We needed twice as many inputs as were available on the Pi, which meant that I’d have to find an external way to expand the I/O capabilities. I sourced an excellent stackable HAT from ModMyPi that gave us access to two MCP23017 port expander chips. By stacking two of these HATs on the Pi we could move all of the inputs from the buttons off of the main GPIO pins. That left enough room for us to drive the extremely long LED strips and account for all the buttons.</p>
+<ParagraphWithPicture src="/assets/blog/put-to-light/gpio-config.jpg" alt="The MCP23017 HAT with everything plugged in" caption="The MCP23017 HAT with everything plugged in">
 
-  <div class="image-container small-image">
-    <img src="/assets/blog/put-to-light/gpio-config.jpg" alt="The MCP23017 HAT with everything plugged in" />
-    <a class="image-caption">The MCP23017 HAT with everything plugged in</a>
-  </div>
+I decided to use a Raspberry Pi for the brain of each put wall. We needed to be able to perform some pretty complex handshakes with the WMS that would have been an absolute nightmare to attempt on an Arduino. While the Pi was better-suited for the networking side, it does not ship with the kind of inputs and outputs that we needed. Each put wall needed to listen to 52 buttons and run approximately six thousand WS2812B LEDs.
 
-</div>
+The first thing to account for were the buttons. We needed twice as many inputs as were available on the Pi, which meant that I’d have to find an external way to expand the I/O capabilities. I sourced an excellent stackable HAT from ModMyPi that gave us access to two MCP23017 port expander chips. By stacking two of these HATs on the Pi we could move all of the inputs from the buttons off of the main GPIO pins. That left enough room for us to drive the extremely long LED strips and account for all the buttons.
+
+</ParagraphWithPicture>
 
 The LEDs were split into two long zig-zag strips–one for the putting side on the front, and one for the packing side on the back. The general idea is that when an item is scanned, the bin that it goes in will light up blue on the front of the wall. When a picker places the item in that bin, they hit the button, and then the system checks if anything else needs to go into the bin to complete the order. If the order is ready to ship, then the LEDs on the other side of the wall light up green to let the shipping department know that the bin is ready to be pulled from the wall and packed for shipping. At 3,000 pixels long we were definitely stretching the boundaries of what our Neopixels were capable of. We were, however, able to get great performance out of them thanks to a beefy power supply that was introduced at multiple parts of the circuit and no need for animation along the strips. Ultimately each wall would only have 30 or 40 LEDs turned on at a time in most cases, so we were able to run both strips from two pins on the Pi. We wanted to go with a full RGB LED rather than a solid-colored strip in order to communicate different phases of a pick wave. For instance, if a picker realized that something was wrong after they confirmed an item’s placement, they could flag the location for a QA check from the tablet computer attached to the wall. This would then light up the front and back of the location with orange lights to let both sides know not to proceed with that bin.
 
