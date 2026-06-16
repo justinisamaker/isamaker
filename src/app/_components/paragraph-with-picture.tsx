@@ -23,7 +23,7 @@ export function ParagraphWithPicture({
           alt={alt}
           width={600}
           height={400}
-          className="w-full border border-black"
+          className="w-full shadow-sm mb-4"
         />
         {caption && (
           captionHref ? (
@@ -31,12 +31,12 @@ export function ParagraphWithPicture({
               href={captionHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-right text-slate-dark text-xs mt-3"
+              className="block w-full text-right text-slate-dark text-xs mt-1"
             >
               {caption}
             </a>
           ) : (
-            <span className="block w-full text-right text-slate-dark text-xs mt-3">
+            <span className="block w-full text-right text-slate-dark text-xs mt-1">
               {caption}
             </span>
           )

@@ -18,7 +18,7 @@ export function BlogImage({ src, alt, caption, captionHref, size = "large" }: Pr
         alt={alt}
         width={1200}
         height={800}
-        className="w-full border border-black"
+        className="w-full shadow-sm mb-4"
       />
       {caption && (
         captionHref ? (
@@ -26,12 +26,12 @@ export function BlogImage({ src, alt, caption, captionHref, size = "large" }: Pr
             href={captionHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-right text-slate-dark text-xs mt-3"
+            className="block w-full text-right text-slate-dark text-xs"
           >
             {caption}
           </a>
         ) : (
-          <span className="block w-full text-right text-slate-dark text-xs mt-3">
+          <span className="block w-full text-right text-slate-dark text-xs">
             {caption}
           </span>
         )

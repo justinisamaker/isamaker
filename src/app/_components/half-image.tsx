@@ -29,7 +29,7 @@ export function HalfImage({
             alt={img.alt}
             width={600}
             height={400}
-            className="w-full border border-black"
+            className="w-full shadow-sm mb-4"
           />
           {img.caption && (
             img.captionHref ? (
@@ -37,12 +37,12 @@ export function HalfImage({
                 href={img.captionHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-right text-slate-dark text-xs mt-3"
+                className="block w-full text-right text-slate-dark text-xs mt-1"
               >
                 {img.caption}
               </a>
             ) : (
-              <span className="block w-full text-right text-slate-dark text-xs mt-3">
+              <span className="block w-full text-right text-slate-dark text-xs mt-1">
                 {img.caption}
               </span>
             )
