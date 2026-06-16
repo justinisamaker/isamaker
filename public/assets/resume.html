@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Smith - Resume</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ------------------------------
+         Base Layout
+      ------------------------------ */
+      body {
+        font-family: Helvetica, Arial, Verdana, sans-serif;
+        line-height: 1.35;
+        color: #222;
+        margin: 0 auto;
+        padding: 1em;
+        max-width:900px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 0.2em 0;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+      }
+
+      main {
+        padding: 0 1em 2em 1em;
+        margin: 0 auto;
+      }
+
+      /* ------------------------------
+         Header
+      ------------------------------ */
+      header {
+        display: grid;
+        grid-template-columns: 4em 1fr 1fr;
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+      }
+
+      .title {
+        padding-left:0.5em;
+      }
+
+      .title h1 {
+        font-size: 1.4em;
+        line-height: 1.3em;
+        margin: 0;
+        padding: 0;
+      }
+      .title h2 {
+        font-size: 0.95em;
+        font-weight: 400;
+        line-height: 1.4em;
+        margin: 0;
+        padding: 0;
+      }
+      .title h6 {
+        font-size: 0.7em;
+        font-weight: 300;
+        line-height: 1.4em;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact p {
+        font-size: 0.75em;
+        text-align: right;
+        margin: 0;
+      }
+
+      /* ------------------------------
+         Sections
+      ------------------------------ */
+      .intro p {
+        font-size: 0.9em;
+        margin-top: 0;
+      }
+
+      .section {
+        margin-top: 1.1em;
+      }
+
+      .section h2 {
+        font-size: 1em;
+        line-height: 1.1;
+      }
+
+      ul {
+        margin: 0.4em 0 0 1.2em;
+        padding: 0;
+      }
+
+      li {
+        font-size: 0.85em;
+        margin-bottom: 0.25em;
+      }
+
+      .date-range {
+        font-style: italic;
+        color: #555;
+        margin: 0.2em 0 0 0;
+        font-size: 0.75em;
+      }
+
+      /* ------------------------------
+         Print Styles
+      ------------------------------ */
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          transform: scale(0.97);
+          transform-origin: top left;
+        }
+
+        header {
+          page-break-after: avoid;
+        }
+
+        li {
+          margin-bottom: 0.15em;
+        }
+
+        @page {
+          size: letter;
+          margin: 0.5in;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="/assets/jts-logo.svg"
+        alt="Justin Smith"
+        style="width: 100%; height: auto"
+      />
+
+      <div class="title">
+        <h1>Justin Smith</h1>
+        <h2>Senior Front-End Engineer</h2>
+        <h6>JavaScript, React, Tailwind/SCSS, and Design Systems</h6>
+      </div>
+
+      <div class="contact">
+        <p>
+          justin.isamaker.com<br />
+          justin@isamaker.com<br />
+          312.860.1116
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="intro">
+        <p>
+          <strong
+            >Senior Front‑End Engineer specializing in React, TypeScript, and
+            scalable front‑end architecture.</strong
+          >
+          Over a decade of experience modernizing large codebases, building
+          design systems, and leading cross‑functional engineering initiatives.
+          Proven success introducing Storybook‑driven component libraries,
+          implementing monorepos, improving testing coverage, and driving
+          organization‑wide front‑end standards. Adept at transforming legacy
+          systems into efficient, maintainable, and well‑documented React
+          applications while mentoring teams and improving development
+          workflows.
+        </p>
+      </div>
+
+      <!-- Intralox -->
+      <div class="section">
+        <h2>Intralox // Senior Front-End Developer</h2>
+        <p class="date-range">
+          Senior Front-End Developer, May 2024 - Present, Front-End Developer, January 2022 - May 2024, Remote
+        </p>
+        <!-- <p>
+          Intralox is an industrial manufacturer that produces a wide variety of
+          conveyance solutions for an almost unbelievable amount of industries.
+          If you've been to the grocery store, received mail through the USPS,
+          drank anything out of a can, or have tires on your vehicle, you more
+          than likely have touched something that has been on one of our
+          products. I joined the team in the middle of a large-scale effort to
+          modernize our web presence, and have been focused on building a more
+          efficient and scalable front-end development process.
+        </p> -->
+
+        <ul>
+          <li>
+            Introduced Storybook and built a comprehensive, reusable component
+            library that standardized UI patterns across multiple web properties
+            and teams
+          </li>
+          <li>
+            Led or contributed to major modernization efforts including
+            rewriting legacy code into TypeScript, converting to a monorepo
+            structure, improving component architecture, and establishing
+            patterns for maintainable, scalable React development
+          </li>
+          <li>
+            Customized Kontent.ai to empower non‑technical content creators to
+            build and update pages while maintaining design consistency and
+            reducing engineering bottlenecks
+          </li>
+          <li>
+            Contributed to the design and development of a belt identification
+            tool that unified previously siloed data sources for the first time
+            in company history
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bricolage -->
+      <div class="section">
+        <h2>Bricolage Academy // Innovator's Workshop Teacher</h2>
+        <p class="date-range">August 2020 - January 2022, New Orleans, LA</p>
+        <!-- <p>
+          The Innovator's Workshop at Bricolage provides a space for students to
+          explore, play, and learn through making. Students are encouraged to
+          use the design thinking process to identify a problem they want to
+          solve, and then are given the tools to create their solution. While
+          this role was drastically different from my past work in software
+          engineering, it let me bring all of my experience to the table and get
+          the next generation of students excited about all of the things that
+          they have the power to create!
+        </p> -->
+
+        <ul>
+          <li>
+            Designed and delivered year‑long courses introducing students to
+            coding, advanced manufacturing, and design thinking, translating
+            complex technical concepts into accessible, hands‑on learning
+          </li>
+          <li>
+            Managed and taught 225+ students across fourth through eighth grade,
+            strengthening my ability to mentor, communicate clearly, and adapt
+            explanations for different skill levels
+          </li>
+        </ul>
+      </div>
+
+      <!-- iSeatz -->
+      <div class="section">
+        <h2>iSeatz // Senior Software Engineer</h2>
+        <p class="date-range">January 2020 - June 2020, New Orleans, LA</p>
+        <!-- <p>
+          iSeatz produces digital tools for major travel brands to help their
+          customers book hotels, flights, and cars. As a senior software
+          engineer, my role largely focused on finding ways to make our
+          front-end development process more efficient. I joined iSeatz in the
+          middle of a multi-year refactoring effort, and was quickly thrown into
+          the mix of figuring out how to radically modularize a large system
+          used across our client list.
+        </p> -->
+
+        <ul>
+          <li>
+            Led a componentization proof‑of‑concept that introduced a more
+            modular React architecture, significantly reducing turnaround time
+            across multiple partner platforms
+          </li>
+          <li>
+            Mentored junior developers and pair‑programmed to build reusable
+            React components powered by Redux Saga and a microservice‑driven
+            backend
+          </li>
+          <li>
+            Improved testing standards with Jest and Enzyme and drove
+            documentation efforts to clarify architectural patterns during a
+            multi‑year refactor
+          </li>
+        </ul>
+      </div>
+
+      <!-- Justin is a Maker -->
+      <div class="section">
+        <h2>Justin is a Maker, LLC // Creative Technologist</h2>
+        <p class="date-range">June 2018 - January 2020, Various Locations</p>
+        <!-- <p>
+          This role allowed me to stretch the boundaries of what JavaScript
+          developers normally get to do. I sold work that primarily focused on
+          using open source hardware with modern JavaScript frameworks to bridge
+          the gap between the screen and a user, and helped companies explore
+          the possibilities of emerging technologies.
+        </p> -->
+
+        <ul>
+          <li>
+            Built interactive installations for Google initiatives using
+            open‑source hardware and modern JavaScript frameworks, bridging
+            physical computing with front‑end engineering
+          </li>
+          <li>
+            Designed and fabricated a put‑to‑light warehouse management system
+            integrated with a major retailer’s custom backend
+          </li>
+          <li>
+            Produced hardware‑software prototypes for venture groups and
+            experiential agencies, delivering fast technical validation for
+            emerging product ideas
+          </li>
+        </ul>
+      </div>
+
+      <!-- Galileo -->
+      <!-- <div class="section">
+        <h2>Galileo Learning // Lead Science Instructor</h2>
+        <p class="date-range">June 2019 - August 2019</p>
+        <p>
+          My previous role as a startup co-founder allowed me to interact with
+          educators regularly, but only from a business side. I decided to use
+          the flexibility of my freelance career to take on a science-focused
+          teaching role for the summer to get hands-on experience in the
+          classroom and better understand what teachers and students need to
+          succeed.
+        </p>
+
+        <ul>
+          <li>
+            Served as a multi-subject lead instructor teaching science, art, and
+            outdoor activities
+          </li>
+          <li>
+            Facilitated classes based around a weekly theme for students at the
+            camp
+          </li>
+          <li>
+            Pushed students to develop their projects using the Galileo
+            Innovation Approach and focused on teaching basic design thinking
+            skills
+          </li>
+          <li>
+            Assisted in camp logistics such as coordinating student checkin,
+            all-camp activities, and communicating with parents
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- Sojourn Fare -->
+      <div class="section">
+        <h2>Sojourn Fare // Technical Co-Founder</h2>
+        <p class="date-range">October 2016 - April 2019, Chicago, IL</p>
+        <!-- <p>
+          As the technical co-founder of the startup, I was in charge of
+          prioritizing and building all technology-focused features for our IoT
+          environmental control unit. In addition to my technical role, I also
+          spearheaded the effort to introduce our product to classrooms and get
+          involved in STEM education.
+        </p> -->
+
+        <ul>
+          <li>
+            Built a Node/Express API controlling sensors and actuators on
+            Raspberry Pi hardware for an environmental control unit
+          </li>
+          <li>
+            Designed, tested, and redesigned a comprehensive React front-end and
+            MongoDB instance to enable users to have full control over their
+            unit
+          </li>
+          <li>
+            Sourced and evaluated sensors and actuators for the unit with the
+            goal of increasing reliability and decreasing cost
+          </li>
+        </ul>
+      </div>
+
+      <!-- Fjord -->
+      <div class="section">
+        <h2>Fjord (Accenture) // Creative Technologist</h2>
+        <p class="date-range">April 2017 - June 2018, Chicago, IL</p>
+        <!-- <p>
+          As one of the founders of the creative technology practice at Fjord
+          Chicago, my role was to design and build prototypes and products that
+          would excite our clients about the possibilities of new technology.
+        </p> -->
+
+        <ul>
+          <li>
+            Built small‑run prototypes using open hardware and JavaScript
+            frameworks to explore concepts in AI, IoT, and blockchain for client
+            pitches
+          </li>
+          <li>
+            Represented the technology team in design‑thinking workshops,
+            helping clients understand technical possibilities and constraints
+          </li>
+          <li>
+            Created hands‑on sessions teaching designers and analysts how to
+            integrate code and hardware into their workflows
+          </li>
+        </ul>
+      </div>
+
+      <!-- Capital One -->
+      <div class="section">
+        <h2>
+          Capital One // Senior Product Specialist, Partnerships - Digital
+          Innovation
+        </h2>
+        <p class="date-range">October 2015 - April 2017, Chicago, IL</p>
+        <!-- <p>
+          As the sole technologist on the digital innovation team for Capital
+          One’s card partnerships, my role was to help brick and mortar
+          retailers figure out how to use technology to survive in the age of
+          e-commerce.
+        </p> -->
+
+        <ul>
+          <li>
+            Built software and hardware prototypes in JavaScript, C++, Python,
+            PHP, and Swift to support new business pitches for major retail
+            partners
+          </li>
+          <li>
+            Utilized nascent technology to create digital and physical
+            prototypes to help establish Capital One’s technological expertise
+            with current and prospective partners
+          </li>
+          <li>
+            Created interactive demos using emerging technologies to showcase
+            Capital One’s innovations
+          </li>
+          <li>
+            Developed a curated repository of prototypes and built
+            WordPress‑based tools to streamline pitch creation
+          </li>
+        </ul>
+      </div>
+
+      <!-- Critical Mass -->
+      <div class="section">
+        <h2>Critical Mass // Senior Developer</h2>
+        <p class="date-range">
+          Senior Developer, May 2014 - July 2015, Developer, June 2013 - May
+          2014, Chicago, IL
+        </p>
+        <!-- <p>
+          This role was the purest front-end role that I’ve worked, and involved
+          the creation and maintenance of websites for major agency clients. I
+          primarily worked on Nissan’s web properties, but also worked with
+          other major clients like United, USAA, and Kohler.
+        </p> -->
+
+        <ul>
+          <li>
+            Built and maintained front‑end features for Nissan on a Java/Grails
+            stack, collaborating with a small team to deliver reliable,
+            production‑ready UI
+          </li>
+          <li>
+            Led a refactor that reduced controller complexity by transitioning
+            pages to a standardized Backbone.js MVC pattern and converting
+            duplicated JavaScript into reusable components with Flight.js and
+            Require.js
+          </li>
+          <li>
+            Increased front‑end autonomy by implementing the first Gulp.js
+            workflows in the Chicago office
+          </li>
+          <li>
+            Strengthened community engagement by hosting local tech Meetups
+          </li>
+        </ul>
+      </div>
+
+      <!-- Other Experience -->
+      <div class="section">
+        <h2>
+          Other Experience // Front-End at Topin & Associates, Kohl's, Gigity.TV
+        </h2>
+        <p class="date-range">2011-2013</p>
+      </div>
+
+      <!-- Topin & Associates -->
+      <!-- <div class="section">
+        <h2>Topin & Associates // Developer</h2>
+        <p class="date-range">June 2012 – June 2013</p>
+
+        <p>
+          Topin & Associates operated as a print agency for roughly 30 years
+          before I started working with them. My role was to help them build
+          their digital practice and to produce websites for their clients.
+        </p>
+
+        <ul>
+          <li>
+            Built custom websites for agency clients using Drupal and WordPress
+          </li>
+          <li>
+            Aided in the creation of a digital workflow to help transition the
+            agency from print to digital
+          </li>
+          <li>
+            Consulted artists and clients in the preliminary phases of the
+            design process
+          </li>
+          <li>
+            Created projects to increase agency revenue and generate digital
+            work
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- Gigty.tv -->
+      <!-- <div class="section">
+        <h2>Gigity.TV // Front-End Development Intern</h2>
+        <p class="date-range">January 2012 – May 2012</p>
+
+        <ul>
+          <li>
+            Designed and implemented front-ends for new features in the app
+          </li>
+          <li>Created a new corporate identity for the company</li>
+          <li>
+            Redesigned the website to improve functionality and coherence with
+            the rebrand
+          </li>
+          <li>
+            Researched possibilities for camera automation using face and motion
+            tracking
+          </li>
+          <li>Worked as a production assistant for live broadcasts</li>
+        </ul>
+      </div> -->
+
+      <!-- Kohl's -->
+      <!-- <div class="section">
+        <h2>Kohl's // Marketing Intern</h2>
+        <p class="date-range">May 20122 – August 2011</p>
+
+        <ul>
+          <li>
+            Developed a marketing plan to position Kohl’s as a style resource
+            for millennials
+          </li>
+          <li>
+            Produced wireframes and interactive prototypes for a targeted
+            microsite
+          </li>
+          <li>
+            Explored methods to engage young customers through digital means
+          </li>
+          <li>
+            Created an in-depth process manual for new hires to the Kohl’s photo
+            studio
+          </li>
+        </ul>
+      </div> -->
+    </main>
+  </body>
+</html>
