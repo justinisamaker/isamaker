@@ -24,7 +24,6 @@ export default async function Post(props: Params) {
         <article className="mb-16 prose mx-auto">
           <PostHeader
             title={post.title}
-            coverImage={post.coverImage}
             date={post.date}
           />
           <div className="max-w-2xl mx-auto text-lg leading-relaxed">
