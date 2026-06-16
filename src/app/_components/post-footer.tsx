@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AnimatedLink from "./animated-link";
 
 type Props = {
   title: string;
@@ -24,16 +24,21 @@ export function PostFooter({ title, externalLink, nextPost, previousPost }: Prop
       <ul className="grid grid-cols-2 list-none m-0 p-0">
         <li className="text-left">
           {nextPost && (
-            <Link href={`/posts/${nextPost.slug}`} className="text-slate-dark hover:underline">
-              &larr; {nextPost.title}
-            </Link>
+            <AnimatedLink
+              href={`/posts/${nextPost.slug}`}
+              iconAlignment="left"
+            >
+              {nextPost.title}
+            </AnimatedLink>
           )}
         </li>
         <li className="text-right">
           {previousPost && (
-            <Link href={`/posts/${previousPost.slug}`} className="text-slate-dark hover:underline">
-              {previousPost.title} &rarr;
-            </Link>
+            <AnimatedLink
+              href={`/posts/${previousPost.slug}`}
+            >
+              {previousPost.title}
+            </AnimatedLink>
           )}
         </li>
       </ul>
