@@ -1,4 +1,4 @@
-import { SITE_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants';
+import { SITE_NAME } from '@/lib/constants';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import cn from 'classnames';
@@ -14,9 +14,6 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: SITE_NAME,
   description: `The personal portfolio of Justin Smith, a Louisiana-based front-end developer.`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
 };
 
 export default function RootLayout({
