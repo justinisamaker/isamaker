@@ -1,5 +1,6 @@
 import { SITE_NAME } from '@/lib/constants';
 import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Raleway } from 'next/font/google';
 import cn from 'classnames';
 import Link from 'next/link';
@@ -81,11 +82,17 @@ export default function RootLayout({
                 Front-end software, open hardware, and human-centered design.
               </h6>
               <hr className="my-4 border-white hidden md:block " />
-              <AnimatedLink href="/assets/justin-smith-resume.html/" openNewTab={true}>
+              <AnimatedLink
+                href="/assets/justin-smith-resume.html/"
+                openNewTab={true}
+              >
                 Resume
               </AnimatedLink>
               <br />
-              <AnimatedLink href="https://www.linkedin.com/in/justinisamaker/" openNewTab={true}>
+              <AnimatedLink
+                href="https://www.linkedin.com/in/justinisamaker/"
+                openNewTab={true}
+              >
                 LinkedIn
               </AnimatedLink>
               <br />
@@ -107,6 +114,7 @@ export default function RootLayout({
             </footer>
           </div>
         </div>
+        <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GTAG_ID}`} />
       </body>
     </html>
   );
