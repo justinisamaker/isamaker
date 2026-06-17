@@ -10,7 +10,7 @@ type Props = {
 export function PostFooter({ title, externalLink, nextPost, previousPost }: Props) {
   return (
     <footer className="max-w-2xl mx-auto">
-      {externalLink && (
+      {/* {externalLink && (
         <a
           href={externalLink}
           target="_blank"
@@ -19,7 +19,7 @@ export function PostFooter({ title, externalLink, nextPost, previousPost }: Prop
         >
           View the live version of {title} &raquo;
         </a>
-      )}
+      )} */}
       <hr className="my-8 border-gray-200" />
       <ul className="grid grid-cols-2 list-none m-0 p-0">
         <li className="text-left">

@@ -81,17 +81,18 @@ export default function RootLayout({
                 Front-end software, open hardware, and human-centered design.
               </h6>
               <hr className="my-4 border-white hidden md:block " />
-              <AnimatedLink href="/assets/justin-smith-resume.html/">
+              <AnimatedLink href="/assets/justin-smith-resume.html/" openNewTab={true}>
                 Resume
               </AnimatedLink>
               <br />
-              <AnimatedLink href="https://www.linkedin.com/in/justinisamaker/">
+              <AnimatedLink href="https://www.linkedin.com/in/justinisamaker/" openNewTab={true}>
                 LinkedIn
               </AnimatedLink>
               <br />
               <AnimatedLink
                 href="https://github.com/justinisamaker"
                 className="hidden md:block"
+                openNewTab={true}
               >
                 GitHub
               </AnimatedLink>
