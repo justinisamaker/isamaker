@@ -63,6 +63,7 @@ next-env.d.ts
 *.pem
 *.swp
 *~
+*-cover-letter.html
 
 # If using Docker
 docker-compose.override.yml
