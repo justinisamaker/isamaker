@@ -13,7 +13,7 @@ export default function AnimatedLink({
     <a
       href={href}
       target="_new"
-      className={`hover:text-blue-300 transition-colors duration-200 group no-underline ${className}`}
+      className={`hover:text-blue-300 transition-colors duration-200 group !no-underline ${className}`}
     >
       {iconAlignment === 'left' && (
         <span className="group-hover:-translate-x-1 transition-transform duration-200 inline-block mr-1">

@@ -11,7 +11,7 @@ export function PostHeader({ title, date }: Props) {
     <>
       <div className="border-b border-slate-900 mt-10 md:mt-0 mb-8 md:mb-10">
         <PostTitle>{title}</PostTitle>
-        <div className="mb-6 text-sm text-blue-800">
+        <div className="mb-6 text-sm text-slate-500">
           <DateFormatter dateString={date} />
         </div>
       </div>

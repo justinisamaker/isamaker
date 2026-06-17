@@ -10,7 +10,7 @@ type Props = {
 
 export function PostPreview({ title, coverImage, excerpt, slug }: Props) {
   return (
-    <Link href={`/posts/${slug}`} className="group block">
+    <Link href={`/posts/${slug}`} className="group block !no-underline">
       <article className="flex h-[20rem] flex-col overflow-hidden border border-slate-900 bg-white shadow-sm transition-all duration-200 ease-in-out">
         <div className="px-6 py-4 bg-white border-b border-slate-900">
           <h3 className="text-base font-semibold text-slate-900 leading-tight">

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import AnimatedLink from '@/app/_components/animated-link';
 
 import './globals.css';
+import styles from '@/app/_components/markdown-styles.module.css';
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -97,10 +98,11 @@ export default function RootLayout({
             </div>
           </aside>
           <div className="flex-1 md:ml-48 pt-12 pb-4 px-8 md:px-16 flex flex-col">
-            <main className="flex-1">{children}</main>
+            <main className={`flex-1 ${styles.markdown}`}>{children}</main>
 
             <footer className="mt-12 text-right text-xs text-slate-500">
-              &copy; {new Date().getFullYear()} Justin Smith. All rights reserved.
+              &copy; {new Date().getFullYear()} Justin Smith. All rights
+              reserved.
             </footer>
           </div>
         </div>
